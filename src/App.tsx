@@ -26,7 +26,15 @@ function App() {
           height: "calc(100% - 60px)",
         }}
       >
-        <SidePanel />
+        <div
+          style={{
+            overflowY: "scroll",
+            width: "auto",
+            minWidth: "400px",
+          }}
+        >
+          <SidePanel />
+        </div>
         <TabContext value={value}>
           <CustomTabList setValue={setValue} />
           <TabPanel value={"0"} sx={{ height: "auto" }}>

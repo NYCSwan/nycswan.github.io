@@ -214,4 +214,5 @@ const theme = createTheme({
   ],
 } as ThemeOptions);
 
-export default responsiveFontSizes(theme);
+const themeResponsiveFonts = responsiveFontSizes(theme);
+export default themeResponsiveFonts;

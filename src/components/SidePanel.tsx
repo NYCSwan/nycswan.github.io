@@ -1,5 +1,5 @@
 import { Box, Grid, IconButton, Stack, Typography } from "@mui/material";
-import meImage from "../assets/contact.jpg";
+import meImage from "../assets/me-hero.jpg";
 import {
   BorderColor,
   StarPurple500,

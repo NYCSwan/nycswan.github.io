@@ -1,10 +1,16 @@
 import TabList from "@mui/lab/TabList";
 import Tab from "@mui/material/Tab";
 
-function a11yProps(index: number) {
+function a11ySxProps(index: number) {
   return {
     id: `simple-tab-${index}`,
     "aria-controls": `simple-tabpanel-${index}`,
+    sx: {
+      height: "70px",
+      px: "2rem",
+      fontSize: "1.25rem",
+      fontWeight: "400",
+    },
   };
 }
 
@@ -27,8 +33,8 @@ export default function CustomTabList({
       centered
       sx={{
         position: "absolute",
-        height: "80px",
-        top: "-80px",
+        height: "70px",
+        top: "-70px",
         backgroundColor: "transparent",
         color: "text.secondary",
         marginLeft: "300px",
@@ -40,15 +46,10 @@ export default function CustomTabList({
         alignContent: "center",
       }}
     >
-      <Tab
-        value={"0"}
-        label="About"
-        {...a11yProps(0)}
-        sx={{ height: "80px", px: "16px" }}
-      />
-      <Tab value={"1"} label="Skills" {...a11yProps(1)} />
-      <Tab value={"2"} label="Experience" {...a11yProps(2)} />
-      <Tab value={"3"} label="Contact" {...a11yProps(3)} />
+      <Tab value={"0"} label="About" {...a11ySxProps(0)} />
+      <Tab value={"1"} label="Skills" {...a11ySxProps(1)} />
+      <Tab value={"2"} label="Experience" {...a11ySxProps(2)} />
+      <Tab value={"3"} label="Contact" {...a11ySxProps(3)} />
     </TabList>
   );
 }
