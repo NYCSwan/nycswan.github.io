@@ -1,18 +1,15 @@
+import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 export default function About() {
   return (
-    <>
-      <Typography variant="h2">
-        Front-end Specialist & Fullstack Software Engineer
+    <Box sx={{ p: "1rem" }}>
+      <Typography variant="h1">
+        Insightful, proactive, product-obsessed software development.
       </Typography>
-      <Typography variant="h1">Megan Swanby</Typography>
-
       <Stack spacing={2}>
-        <Typography variant="body1">
-          Insightful, proactive, product-obsessed software development.
-        </Typography>
+        <Typography variant="body1"></Typography>
         <Typography variant="body1">
           I'm a fullstack software engineer with a focus on front-end
           development, and a passion for creating beautiful, functional, and
@@ -28,6 +25,6 @@ export default function About() {
           idea, let's chat!
         </Typography>
       </Stack>
-    </>
+    </Box>
   );
 }

@@ -2,6 +2,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <main
       style={{
+        position: "absolute",
+        top: "0",
+        bottom: "0",
         backgroundColor: "background.default",
         overflow: "hidden",
         padding: "100px 40px 45px 40px",

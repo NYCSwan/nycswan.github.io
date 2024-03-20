@@ -56,6 +56,15 @@ const components = {
       },
     },
   },
+  MuiTabPanel: {
+    styleOverrides: {
+      root: {
+        backgroundColor: "#f5f0f0",
+        p: "2rem",
+        height: "auto",
+      },
+    },
+  },
   MuiTab: {
     styleOverrides: {
       root: {
@@ -66,7 +75,8 @@ const components = {
         transition: "all 0.2s ease",
         "&.Mui-active, &.Mui-selected": {
           // border: "1px solid #2e4621",
-          backgroundColor: "#EEFEBF",
+          backgroundColor: "#88ad4c",
+          color: "#ece6d4",
         },
       },
     },
@@ -79,33 +89,34 @@ const theme = createTheme({
     mode: "light",
     primary: {
       main: "#2E4621",
-      light: "#EEFEBF",
+      light: "#88ad4c",
     },
     secondary: {
       main: "#023047",
-      light: "#8338ec",
+      light: "#d1a750",
     },
     error: { main: "#f50057" },
     gray: {
-      100: "#f8f9fa",
+      100: "#ece6d4",
       200: "#f3ecfd",
       300: "#6d6875D9",
       500: "#9a96a9",
-      700: "#4B175E",
+      700: "#392145",
       800: "#230344",
       900: "#090213",
     },
     background: {
       default: "#f8f9fa",
-      paper: "rgb(165, 165, 165)",
+      paper: "#f5f0f0",
     },
     common: {
       black: "#000",
       white: "#f8f9fa",
     },
     text: {
-      primary: "#100f3a",
+      primary: "#212D45",
       secondary: "#7a798c",
+      contrastText: "#ded8cc",
     },
     divider: "#eadece",
   },
@@ -143,6 +154,7 @@ const theme = createTheme({
     h5: {
       fontFamily: "Rubik Variable",
       fontSize: "1.2rem",
+      lineHeight: 2,
       fontWeight: "400",
     },
     body1: {

@@ -13,8 +13,7 @@ export default function SidePanel() {
     <Stack
       flexDirection="column"
       sx={{
-        maxWidth: "300px",
-        height: "100%",
+        maxWidth: "400px",
         backgroundColor: "secondary.main",
         color: "gray.100",
       }}
@@ -25,13 +24,15 @@ export default function SidePanel() {
           padding: "1rem",
         }}
       >
-        <Typography variant="h2">General Info</Typography>
+        <Typography variant="h2" textAlign="center" gutterBottom>
+          General Info
+        </Typography>
         <Grid container>
           <Grid item xs={1}>
-            <BorderColor />
-            <StarPurple500 />
-            <ContactMail />
-            <Computer />
+            <BorderColor sx={{ height: "35px" }} />
+            <StarPurple500 sx={{ height: "35px" }} />
+            <ContactMail sx={{ height: "35px" }} />
+            <Computer sx={{ height: "35px" }} />
           </Grid>
           <Grid item xs={3}>
             <Typography variant="h5">Name:</Typography>
@@ -40,10 +41,10 @@ export default function SidePanel() {
             <Typography variant="h5">LinkedIn:</Typography>
           </Grid>
           <Grid item xs={8}>
-            <Typography variant="body1">Megan Swanby</Typography>
-            <Typography variant="body1">Washington, DC</Typography>
-            <Typography variant="body1">megan.swanby@gmail.com</Typography>
-            <Typography variant="body1">www.meganswanby.com</Typography>
+            <Typography variant="h5">Megan Swanby</Typography>
+            <Typography variant="h5">Washington, DC</Typography>
+            <Typography variant="h5">megan.swanby@gmail.com</Typography>
+            <Typography variant="h5">www.meganswanby.com</Typography>
           </Grid>
           <Grid item>
             <IconButton href="https://www.github.com/nycswan" color="inherit">

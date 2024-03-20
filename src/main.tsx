@@ -4,6 +4,8 @@ import App from "./App.tsx";
 import "./index.css";
 import { ThemeProvider } from "@mui/material";
 import theme from "./ThemeOptions.ts";
+import "@fontsource/major-mono-display";
+import "@fontsource-variable/rubik";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
