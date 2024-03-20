@@ -1,0 +1,53 @@
+[
+  {
+    "id": "brace",
+    "title": "Brace.ai: Stavvy",
+    "role": "Front-end tech leadership & Senior Software Developer",
+    "tags": ["HTML/CSS", "React", "Typescript", "Redux", "highCharts"],
+    "date": "2019-2023",
+    "description": "Brace was a software-as-a-service (Saas) technology provider whose focus is in the mortgage servicing space. It is an end-to-end mortgage servicing software for loss mitigation.   Over four years, I was in a FE tech leadership position, and participated in all aspects of product development from planning through execution.",
+    "image": { "url": "/src/assets/brace-Hero-Shot.jpeg" },
+    "link": "/portfolio/brace",
+    "externalLink": "https://stavvy.com/mortgage-servicing-solution"
+  },
+  {
+    "id": "cayor",
+    "title": "Cayor Capital",
+    "role": "Full Stack Developer",
+    "tags": [
+      "React",
+      "Mobile first",
+      "Javascript es6",
+      "Bootstrap",
+      "Google Cloud",
+      "SASS"
+    ],
+    "description": "Cayor Capital launched in 2015, as a Sub-Saharan Africa equity fund, focusing on mid-market assets and investments. Upon reaching their investment goal, Cayor required a website update. I worked with the Cayor team to design and develop and maintain thier new, responsive single page app to attract future investments.\n My approach to Cayor was to advocate for a fresh, updated interface that put the investors and portfolio companies first. To make the site user-friendly, we focused on breathing life into the Company decks and transforming the details into designed pages.",
+    "image": { "url": "/src/assets/cayor.png" },
+    "link": "portfolio/cayor"
+  },
+  {
+    "id": "aeroasis",
+    "title": "Aeroasis",
+    "role": "Full Stack Developer",
+    "tags": [
+      "Squarespace",
+      "Mobile first",
+      "Shopify",
+      "Square integration",
+      "HTML/CSS",
+      "React",
+      "React Native",
+      "D3",
+      "IOS",
+      "Android",
+      "IoT",
+      "Nodejs",
+      "AWS"
+    ],
+    "date": "2017 - 2019",
+    "description": "Aeroasis is a resource autonomy startup with a strong focus on education. I developed an education curricula, designed and developed a platform for teachers and educators to access and interact with the lesson plans. I managed and led in the development of the Aeroasis Website, which led to a 200% increase in visitor traffic and improved company SEO. Created and maintain company shop through Shopify, paypal, and Square. Led development of the Aeroasis Grow App: an IoT connected mobile user app that maintains and controls an indoor garden ecosystem.",
+    "image": { "url": "/src/assets/mobile.jpg" },
+    "link": "portfolio/aeroasis"
+  }
+]
