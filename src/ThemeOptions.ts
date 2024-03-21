@@ -125,6 +125,7 @@ const theme = createTheme({
   },
   spacing: 8,
   typography: {
+    fontSize: 14,
     fontFamily: "'Rubik Variable', sans-serif",
     fontWeightLight: 300,
     fontWeightBold: 700,
@@ -135,11 +136,13 @@ const theme = createTheme({
       fontWeight: "800",
       textAlign: "center",
       fontSize: "2.3rem",
+      color: "#212D45",
     },
     h2: {
       fontFamily: "Rubik Variable",
-      fontSize: "2rem",
-      fontWeight: "400",
+      fontSize: "1.52rem",
+      fontWeight: "500",
+      color: "#7a798c",
     },
     h3: {
       fontFamily: "Rubik Variable",
@@ -161,7 +164,7 @@ const theme = createTheme({
       fontSize: "1rem",
       fontFamily: "Rubik Variable",
       fontWeight: "400",
-      lineHeight: "1.25rem",
+      lineHeight: "1.2rem",
       textAlign: "left",
     },
     body2: {

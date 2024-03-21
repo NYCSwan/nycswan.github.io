@@ -1,5 +1,5 @@
 import Typography from "@mui/material/Typography";
-import MainContentContainer from "../components/MainContentContainer";
+import MainContentContainer from "../components/ContentContainer";
 import { Stack } from "@mui/material";
 import { GitHub, Javascript } from "@mui/icons-material";
 

@@ -6,7 +6,7 @@ function a11ySxProps(index: number) {
     id: `simple-tab-${index}`,
     "aria-controls": `simple-tabpanel-${index}`,
     sx: {
-      height: "70px",
+      height: { xs: "60px", xl: "80px" },
       px: "2rem",
       fontSize: "1.25rem",
       fontWeight: "400",
@@ -33,8 +33,8 @@ export default function CustomTabList({
       centered
       sx={{
         position: "absolute",
-        height: "70px",
-        top: "-70px",
+        height: { xs: "60px", xl: "80px" },
+        top: { xs: "-60px", xl: "-80px" },
         backgroundColor: "transparent",
         color: "text.secondary",
         marginLeft: "300px",

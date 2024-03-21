@@ -30,7 +30,10 @@ function App() {
           style={{
             overflowY: "scroll",
             width: "auto",
-            minWidth: "400px",
+            minWidth: "350px",
+            padding: 0,
+            margin: 0,
+            scrollbarWidth: "none",
           }}
         >
           <SidePanel />

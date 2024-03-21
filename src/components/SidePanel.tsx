@@ -13,21 +13,33 @@ export default function SidePanel() {
     <Stack
       flexDirection="column"
       sx={{
-        maxWidth: "400px",
+        maxWidth: { xs: "350px", xl: "450px" },
         backgroundColor: "secondary.main",
         color: "gray.100",
+        height: { xs: "inherit", xl: "100%" },
       }}
     >
       <img src={meImage} alt="" />
-      <Box
+      <Stack
+        flexDirection="column"
         sx={{
-          padding: "1rem",
+          padding: "2rem 1rem",
+          height: "100%",
         }}
       >
-        <Typography variant="h2" textAlign="center" gutterBottom>
+        <Typography
+          color="secondary.light"
+          sx={{
+            fontSize: { xs: "1.75rem", xl: "2rem" },
+            fontFamily: "Major Mono Display",
+            fontWeight: 700,
+          }}
+          textAlign="center"
+          gutterBottom
+        >
           General Info
         </Typography>
-        <Grid container>
+        <Grid container paddingTop={"1rem"}>
           <Grid item xs={1}>
             <BorderColor sx={{ height: "35px" }} />
             <StarPurple500 sx={{ height: "35px" }} />
@@ -35,30 +47,38 @@ export default function SidePanel() {
             <Computer sx={{ height: "35px" }} />
           </Grid>
           <Grid item xs={3}>
-            <Typography variant="h5">Name:</Typography>
-            <Typography variant="h5">Location:</Typography>
-            <Typography variant="h5">Email:</Typography>
-            <Typography variant="h5">LinkedIn:</Typography>
+            <Typography variant="h5" align="center">
+              Name:
+            </Typography>
+            <Typography align="center" variant="h5">
+              Loc:
+            </Typography>
+            <Typography align="center" variant="h5">
+              Email:
+            </Typography>
+            <Typography variant="h5" align="center">
+              Web:
+            </Typography>
           </Grid>
-          <Grid item xs={8}>
-            <Typography variant="h5">Megan Swanby</Typography>
-            <Typography variant="h5">Washington, DC</Typography>
-            <Typography variant="h5">megan.swanby@gmail.com</Typography>
-            <Typography variant="h5">www.meganswanby.com</Typography>
-          </Grid>
-          <Grid item>
-            <IconButton href="https://www.github.com/nycswan" color="inherit">
-              <GitHub />
-            </IconButton>
-            <IconButton
-              color="inherit"
-              href="https://www.linkedin.com/in/meganswanby"
-            >
-              <ContactMail />
-            </IconButton>
+          <Grid item xs={8} gap={1}>
+            <Typography lineHeight={"40px"}>Megan Swanby</Typography>
+            <Typography lineHeight={"40px"}>Washington, DC</Typography>
+            <Typography lineHeight={"40px"}>megan.swanby@gmail.com</Typography>
+            <Typography lineHeight={"40px"}>www.meganswanby.com</Typography>
           </Grid>
         </Grid>
-      </Box>
+        <Box sx={{ height: "35px", paddingTop: 2, alignSelf: "center" }}>
+          <IconButton href="https://www.github.com/nycswan" color="inherit">
+            <GitHub />
+          </IconButton>
+          <IconButton
+            color="inherit"
+            href="https://www.linkedin.com/in/meganswanby"
+          >
+            <ContactMail />
+          </IconButton>
+        </Box>
+      </Stack>
     </Stack>
   );
 }

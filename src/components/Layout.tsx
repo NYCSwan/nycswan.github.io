@@ -1,13 +1,17 @@
+import { styled } from "@mui/system";
+
+const StyledMain = styled("main")({});
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <main
-      style={{
+    <StyledMain
+      sx={{
         position: "absolute",
         top: "0",
         bottom: "0",
         backgroundColor: "background.default",
         overflow: "hidden",
-        padding: "100px 40px 45px 40px",
+        padding: { xs: "40px 40px 45px 40px", xl: "100px 40px 60px 40px" },
         textAlign: "left",
       }}
     >
@@ -29,6 +33,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <a href="https://www.github.com/nycswan">source code</a>
         </p>
       </footer>
-    </main>
+    </StyledMain>
   );
 }

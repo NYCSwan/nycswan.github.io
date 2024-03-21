@@ -8,7 +8,7 @@ const ContentContainer = styled(Box)(({ theme }) => ({
     px: "4rem",
     py: "2rem",
   },
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     py: "1rem",
     px: "0.5rem",
   },

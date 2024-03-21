@@ -1,6 +1,6 @@
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import ContentContainer from "../components/MainContentContainer";
+import ContentContainer from "../components/ContentContainer";
 import Box from "@mui/material/Box";
 
 export default function About() {
