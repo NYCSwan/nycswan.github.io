@@ -1,16 +1,15 @@
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import ContentContainer from "../components/ContentContainer";
-import Box from "@mui/material/Box";
+import PageTitles from "../components/PageTitles";
 
 export default function About() {
   return (
     <ContentContainer>
-      <Box pb={4}>
-        <Typography variant="h1">
-          Full Stack Developer. Tinkerer. Thinkerer.
-        </Typography>
-      </Box>
+      <PageTitles
+        title={"My Bio"}
+        subtitle="Full Stack Developer. Tinkerer. Thinkerer."
+      />
       <Stack spacing={2}>
         <Typography variant="body1">
           Hey there! Thanks for stopping by. I am a fullstack developer with a

@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Skills from "./pages/Skills";
 import Contact from "./pages/contact";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   const [value, setValue] = React.useState("0");
@@ -40,7 +41,7 @@ function App() {
         </div>
         <TabContext value={value}>
           <CustomTabList setValue={setValue} />
-          <TabPanel value={"0"} sx={{ height: "auto" }}>
+          <TabPanel value={"0"}>
             <About />
           </TabPanel>
           <TabPanel value={"1"}>
@@ -50,6 +51,9 @@ function App() {
             <Experience />
           </TabPanel>
           <TabPanel value={"3"}>
+            <Portfolio />
+          </TabPanel>
+          <TabPanel value={"4"}>
             <Contact />
           </TabPanel>
         </TabContext>

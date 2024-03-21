@@ -42,9 +42,6 @@ const components = {
   },
   MuiContainer: {
     styleOverrides: {
-      root: {
-        maxWidth: "inherit",
-      },
       fixed: {
         height: "100%",
         padding: "1rem",
@@ -59,22 +56,23 @@ const components = {
   MuiTabPanel: {
     styleOverrides: {
       root: {
+        position: "relative",
         backgroundColor: "#f5f0f0",
-        p: "2rem",
-        height: "auto",
+        overflow: "hidden",
+        height: "100%",
       },
     },
   },
   MuiTab: {
     styleOverrides: {
       root: {
+        fontFamily: "rosario",
         textTransform: "none",
         backgroundColor: "#2E4621",
         color: "#EEFEBF",
         marginRight: "1px",
         transition: "all 0.2s ease",
         "&.Mui-active, &.Mui-selected": {
-          // border: "1px solid #2e4621",
           backgroundColor: "#88ad4c",
           color: "#ece6d4",
         },
@@ -139,7 +137,7 @@ const theme = createTheme({
       color: "#212D45",
     },
     h2: {
-      fontFamily: "Rubik Variable",
+      fontFamily: "Rosario",
       fontSize: "1.52rem",
       fontWeight: "500",
       color: "#7a798c",
@@ -147,7 +145,7 @@ const theme = createTheme({
     h3: {
       fontFamily: "Rubik Variable",
       fontSize: "1.7rem",
-      fontWeight: "600",
+      fontWeight: "400",
     },
     h4: {
       fontFamily: "Rubik Variable",

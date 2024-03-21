@@ -7,8 +7,8 @@ function a11ySxProps(index: number) {
     "aria-controls": `simple-tabpanel-${index}`,
     sx: {
       height: { xs: "60px", xl: "80px" },
-      px: "2rem",
-      fontSize: "1.25rem",
+      px: { xs: "2rem", xl: "3rem" },
+      fontSize: { xs: "1rem", xl: "1.25rem" },
       fontWeight: "400",
     },
   };
@@ -37,7 +37,7 @@ export default function CustomTabList({
         top: { xs: "-60px", xl: "-80px" },
         backgroundColor: "transparent",
         color: "text.secondary",
-        marginLeft: "300px",
+        marginLeft: "350px",
         paddingLeft: "2rem",
         width: "50%",
         display: "flex",
@@ -49,7 +49,8 @@ export default function CustomTabList({
       <Tab value={"0"} label="About" {...a11ySxProps(0)} />
       <Tab value={"1"} label="Skills" {...a11ySxProps(1)} />
       <Tab value={"2"} label="Experience" {...a11ySxProps(2)} />
-      <Tab value={"3"} label="Contact" {...a11ySxProps(3)} />
+      <Tab value={"3"} label="Portfolio" {...a11ySxProps(3)} />
+      <Tab value={"4"} label="Contact" {...a11ySxProps(4)} />
     </TabList>
   );
 }

@@ -7,14 +7,19 @@ export default function Header() {
     <Stack
       flexDirection="row"
       sx={{
-        alignItems: "center",
-        justifyContent: "flex-end",
-        maxWidth: { xs: "330px", xl: "450px" },
-        height: { xs: "60px", xl: "70px" },
+        justifyContent: "flex-start",
+        maxWidth: { xs: "330px", xl: "400px" },
+        height: "60px",
       }}
     >
-      <img src={logo} alt="" style={{ height: "40px", width: "auto" }} />
-      <Typography variant="h2">Portfolio</Typography>
+      <img
+        src={logo}
+        alt=""
+        style={{ height: "24px", width: "auto", paddingRight: "1rem" }}
+      />
+      <Typography variant="h2" fontFamily="Major Mono Display">
+        Portfolio
+      </Typography>
     </Stack>
   );
 }

@@ -2,10 +2,11 @@ import { Container, Stack } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import contact from "../assets/contact-me.jpg";
+import ContentContainer from "../components/ContentContainer";
 
 export default function Contact() {
   return (
-    <>
+    <ContentContainer>
       <Typography variant="h1" pt={4}>
         We should chat if you ...
       </Typography>
@@ -47,6 +48,6 @@ export default function Contact() {
           </Typography>
         </Stack>
       </Container>
-    </>
+    </ContentContainer>
   );
 }

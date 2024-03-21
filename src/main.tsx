@@ -6,6 +6,7 @@ import { ThemeProvider } from "@mui/material";
 import themeResponsiveFonts from "./ThemeOptions.ts";
 import "@fontsource/major-mono-display";
 import "@fontsource-variable/rubik";
+import "@fontsource-variable/rosario";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
