@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 import ContentContainer from "../components/ContentContainer";
 import PageTitles from "../components/PageTitles";
 import React from "react";
+import ScrollStack from "../components/ScrollStack";
 const professionalResume = [
   {
     dates: "Spring 2021 - Fall 2023",
@@ -34,31 +35,43 @@ export default function Experience() {
   return (
     <ContentContainer>
       <PageTitles title={"My Experience"} subtitle="where I excelled" />
-      <Box pb={4}>
-        <Typography variant="h3">
-          Insightful, proactive, product-obsessed software development.
-        </Typography>
-      </Box>
-      <Grid container spacing={2}>
-        {professionalResume.map(({ dates, position, company, description }) => (
-          <React.Fragment key={dates}>
-            <Grid item xs={6} md={3}>
-              <Typography variant="h5" fontFamily="Major Mono Display">
-                {dates}
-              </Typography>
-              <Typography variant="h2" variantMapping={{ h2: "p" }}>
-                {position}
-              </Typography>
-            </Grid>
-            <Grid item xs={6} md={3}>
-              {company}
-            </Grid>
-            <Grid item xs={12} md={6}>
-              {description}
-            </Grid>
-          </React.Fragment>
-        ))}
-      </Grid>
+      <ScrollStack>
+        <Box pb={4}>
+          <Typography variant="h3" align="center">
+            Insightful, Proactive, Product-obsessed Software Development
+          </Typography>
+        </Box>
+        <Grid container rowGap={5} columnGap={3} columnSpacing={2}>
+          {professionalResume.map(
+            ({ dates, position, company, description }) => (
+              <React.Fragment key={dates}>
+                <Grid item xs={4}>
+                  <Typography
+                    variant="body1"
+                    fontFamily="Major Mono Display"
+                    align="right"
+                  >
+                    {dates}
+                  </Typography>
+                  <Typography variant="body1" align="right">
+                    {company}
+                  </Typography>
+                </Grid>
+                <Grid item xs={7}>
+                  <Typography
+                    variant="h2"
+                    variantMapping={{ h2: "p" }}
+                    gutterBottom
+                  >
+                    {position}
+                  </Typography>
+                  <Typography variant="body1">{description}</Typography>
+                </Grid>
+              </React.Fragment>
+            )
+          )}
+        </Grid>
+      </ScrollStack>
     </ContentContainer>
   );
 }

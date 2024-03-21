@@ -1,12 +1,15 @@
 import ContentContainer from "../components/ContentContainer";
 import PageTitles from "../components/PageTitles";
-import CarouselStepper from "../components/CarouselStepper";
+import PortfolioDetails from "../components/PortfolioDetails";
+import ScrollStack from "../components/ScrollStack";
 
 export default function Portfolio() {
   return (
     <ContentContainer>
       <PageTitles title="My Portfolio" />
-      <CarouselStepper />
+      <ScrollStack>
+        <PortfolioDetails />
+      </ScrollStack>
     </ContentContainer>
   );
 }

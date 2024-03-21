@@ -59,7 +59,6 @@ const components = {
         position: "relative",
         backgroundColor: "#f5f0f0",
         overflow: "hidden",
-        height: "100%",
       },
     },
   },
