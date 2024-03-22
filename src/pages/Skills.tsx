@@ -1,8 +1,12 @@
-import { GitHub, Javascript } from "@mui/icons-material";
-import { Grid, Stack } from "@mui/material";
+import { GitHub } from "@mui/icons-material";
+import { Box, Grid, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import ContentContainer from "../components/ContentContainer";
 import PageTitles from "../components/PageTitles";
+import node from "../assets/node.svg";
+import react from "../assets/react.svg";
+import js from "../assets/js.svg";
+import ImageAsIcon from "../components/ImageAsIcon";
 
 export default function Skills() {
   return (
@@ -28,12 +32,38 @@ export default function Skills() {
           background, assisting the team or teaching myself a new programming
           language.
         </Typography>
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <Javascript />
+        <Grid container rowGap={2}>
+          <Grid container item xs={12}>
+            <Grid item xs={3}>
+              <ImageAsIcon component="img" src={js} alt="" />
+            </Grid>
+            <Grid item xs={3}>
+              <Typography variant="body1">Javascript</Typography>
+            </Grid>
           </Grid>
-          <Grid item xs={12}>
-            <GitHub />
+          <Grid container item xs={12}>
+            <Grid item xs={3}>
+              <GitHub />
+            </Grid>
+            <Grid item xs={3}>
+              <Typography variant="body1">Javascript</Typography>
+            </Grid>
+          </Grid>
+          <Grid container item xs={12}>
+            <Grid item xs={3}>
+              <ImageAsIcon component="img" src={node} alt="" />
+            </Grid>
+            <Grid item xs={3}>
+              <Typography variant="body1">Node</Typography>
+            </Grid>
+          </Grid>
+          <Grid container item xs={12}>
+            <Grid item xs={3}>
+              <ImageAsIcon component="img" src={react} alt="" />
+            </Grid>
+            <Grid item xs={3}>
+              <Typography variant="body1">React</Typography>
+            </Grid>
           </Grid>
         </Grid>
         <Stack spacing={2} direction={"column"}>

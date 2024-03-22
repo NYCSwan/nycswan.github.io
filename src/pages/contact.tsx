@@ -1,15 +1,16 @@
 import { Container, Stack } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import contact from "../assets/contact-me.jpg";
 import ContentContainer from "../components/ContentContainer";
+import PageTitles from "../components/PageTitles";
 
 export default function Contact() {
   return (
     <ContentContainer>
-      <Typography variant="h1" pt={4}>
-        We should chat if you ...
-      </Typography>
+      <PageTitles
+        title="We should chat if you ..."
+        subtitle="where you can find me"
+      />
       <Container
         maxWidth="md"
         sx={{
@@ -35,16 +36,22 @@ export default function Contact() {
           pl={"30%"}
           height="inherit"
           flexDirection="column"
+          width={"max-content"}
+          alignItems={"center"}
           spacing={6}
-          sx={{
-            backgroundImage: `url(${contact})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
+          // sx={{
+          //   marginLeft: "20%",
+          //   backgroundImage: `url(${contact})`,
+          //   backgroundPosition: "center",
+          //   backgroundSize: "cover",
+          // }}
         >
           <Typography variant="h5">
             Find me on{" "}
-            <a href="https://www.linkedin.com/in/megan-swanby">Linked-in!</a>
+            <a href="https://www.linkedin.com/in/megan-swanby">Linked-in</a>
+          </Typography>
+          <Typography variant="h5" marginTop={0}>
+            OR <a href="https://www.linkedin.com/in/megan-swanby">Github!</a>
           </Typography>
         </Stack>
       </Container>
