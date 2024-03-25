@@ -3,6 +3,41 @@ import {
   ThemeOptions,
   responsiveFontSizes,
 } from "@mui/material/styles";
+import {
+  Palette as MuiPalette,
+  PaletteOptions as MuiPaletteOptions,
+} from "@mui/material/styles/createPalette";
+declare module "@mui/material/styles/createPalette" {
+  interface Palette extends MuiPalette {
+    gray: {
+      100: string;
+      200: string;
+      300: string;
+      400: string;
+      500: string;
+      600: string;
+      700: string;
+      800: string;
+      900: string;
+    };
+    contrastText: string;
+  }
+
+  interface PaletteOptions extends MuiPaletteOptions {
+    gray?: {
+      100?: string;
+      200?: string;
+      300?: string;
+      400?: string;
+      500?: string;
+      600?: string;
+      700?: string;
+      800?: string;
+      900?: string;
+    };
+    contrastText?: string;
+  }
+}
 const components = {
   MuiButtonBase: {
     defaultProps: {
@@ -52,28 +87,28 @@ const components = {
         left: "10%",
       },
     },
-  },
-  MuiTabPanel: {
-    styleOverrides: {
-      root: {
-        position: "relative",
-        backgroundColor: "#f5f0f0",
-        overflow: "hidden",
+    MuiTabPanel: {
+      styleOverrides: {
+        root: {
+          position: "relative",
+          backgroundColor: "#f5f0f0",
+          overflow: "hidden",
+        },
       },
     },
-  },
-  MuiTab: {
-    styleOverrides: {
-      root: {
-        fontFamily: "rosario",
-        textTransform: "none",
-        backgroundColor: "#2E4621",
-        color: "#EEFEBF",
-        marginRight: "1px",
-        transition: "all 0.2s ease",
-        "&.Mui-active, &.Mui-selected": {
-          backgroundColor: "#88ad4c",
-          color: "#ece6d4",
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          fontFamily: "rosario",
+          textTransform: "none",
+          backgroundColor: "#2E4621",
+          color: "#EEFEBF",
+          marginRight: "1px",
+          transition: "all 0.2s ease",
+          "&.Mui-active, &.Mui-selected": {
+            backgroundColor: "#88ad4c",
+            color: "#ece6d4",
+          },
         },
       },
     },
@@ -83,6 +118,7 @@ const components = {
 const theme = createTheme({
   components,
   palette: {
+    contrastThreshold: 4.5,
     mode: "light",
     primary: {
       main: "#2E4621",
@@ -113,8 +149,8 @@ const theme = createTheme({
     text: {
       primary: "#212D45",
       secondary: "#7a798c",
-      contrastText: "#ded8cc",
     },
+    contrastText: "#ded8cc",
     divider: "#eadece",
   },
   shape: {
@@ -215,4 +251,5 @@ const theme = createTheme({
 } as ThemeOptions);
 
 const themeResponsiveFonts = responsiveFontSizes(theme);
+
 export default themeResponsiveFonts;
