@@ -1,7 +1,7 @@
-import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import ContentContainer from "../components/ContentContainer";
 import PageTitles from "../components/PageTitles";
+import ScrollStack from "../components/ScrollStack";
 
 export default function About() {
   return (
@@ -10,7 +10,7 @@ export default function About() {
         title={"My Bio"}
         subtitle="Full Stack Developer. Tinkerer. Thinkerer."
       />
-      <Stack spacing={2}>
+      <ScrollStack>
         <Typography variant="body1">
           Hey there! Thanks for stopping by. I am a fullstack developer with a
           unique background in education and the arts. I am passion about
@@ -29,7 +29,7 @@ export default function About() {
           teacher, and non-profit manager. I'm always up for a challenge, get in
           touch if you'd like a great partner!
         </Typography>
-      </Stack>
+      </ScrollStack>
     </ContentContainer>
   );
 }

@@ -3,9 +3,8 @@
     "id": "brace",
     "title": "Brace.ai: Stavvy",
     "role": "Front-end tech leadership & Senior Software Developer",
-    "tags": ["HTML/CSS", "React", "Typescript", "Redux", "highCharts"],
     "date": "2019-2023",
-    "description": "Brace was a software-as-a-service (Saas) technology provider whose focus is in the mortgage servicing space. It is an end-to-end mortgage servicing software for loss mitigation.   Over four years, I was in a FE tech leadership position, and participated in all aspects of product development from planning through execution.",
+    "description": "Brace was a software-as-a-service (saas) technology provider whose focus was in the mortgage servicing space. It is an end-to-end mortgage servicing software for loss mitigation.   Over four years, I  participated in all aspects of product development lifecycle from planning through execution. I was responsible for developing and maintaining the front-end of each application, working closely with the design team to create seamless user experiences.",
     "image": { "url": "/src/assets/brace-Hero-Shot.jpeg" },
     "link": "/portfolio/brace",
     "externalLink": "https://stavvy.com/mortgage-servicing-solution"
@@ -46,7 +45,7 @@
       "AWS"
     ],
     "date": "2017 - 2019",
-    "description": "Aeroasis is a resource autonomy startup with a strong focus on education. I developed an education curricula, designed and developed a platform for teachers and educators to access and interact with the lesson plans. I managed and led in the development of the Aeroasis Website, which led to a 200% increase in visitor traffic and improved company SEO. Created and maintain company shop through Shopify, paypal, and Square. Led development of the Aeroasis Grow App: an IoT connected mobile user app that maintains and controls an indoor garden ecosystem.",
+    "description": "Aeroasis was a resource autonomy startup with a strong focus on education.  Aeroasis flagship product was an IoT indoor home garden system that combined innovative technology with intuitive mobile design to seamlessly grow produce.",
     "image": { "url": "/src/assets/mobile.jpg" },
     "link": "portfolio/aeroasis"
   }

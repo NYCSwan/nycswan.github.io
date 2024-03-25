@@ -3,41 +3,7 @@ import {
   ThemeOptions,
   responsiveFontSizes,
 } from "@mui/material/styles";
-import {
-  Palette as MuiPalette,
-  PaletteOptions as MuiPaletteOptions,
-} from "@mui/material/styles/createPalette";
-declare module "@mui/material/styles/createPalette" {
-  interface Palette extends MuiPalette {
-    gray: {
-      100: string;
-      200: string;
-      300: string;
-      400: string;
-      500: string;
-      600: string;
-      700: string;
-      800: string;
-      900: string;
-    };
-    contrastText: string;
-  }
 
-  interface PaletteOptions extends MuiPaletteOptions {
-    gray?: {
-      100?: string;
-      200?: string;
-      300?: string;
-      400?: string;
-      500?: string;
-      600?: string;
-      700?: string;
-      800?: string;
-      900?: string;
-    };
-    contrastText?: string;
-  }
-}
 const components = {
   MuiButtonBase: {
     defaultProps: {
@@ -51,27 +17,7 @@ const components = {
     styleOverrides: {
       root: {
         textTransform: "none",
-      },
-    },
-  },
-  MuiCard: {
-    defaultProps: {
-      elevation: 1,
-    },
-    styleOverrides: {
-      root: {
-        borderRadius: 4,
-        display: "flex",
-        flexDirection: "column",
-        cursor: "pointer",
-        width: "initial",
-        height: "initial",
-        backgroundColor: "#6d6875",
-        boxShadow: "inset 0px 0px 1px 0px grey.700",
-        borderColor: "rgb(73, 18, 110)",
-        borderWidth: "1px",
-        margin: "1rem",
-        padding: ".5rem",
+        backgroundColor: undefined,
       },
     },
   },
@@ -93,13 +39,13 @@ const components = {
           position: "relative",
           backgroundColor: "#f5f0f0",
           overflow: "hidden",
+          fontFamily: "'Rosario Variable', sans-serif",
         },
       },
     },
     MuiTab: {
       styleOverrides: {
         root: {
-          fontFamily: "rosario",
           textTransform: "none",
           backgroundColor: "#2E4621",
           color: "#EEFEBF",
@@ -114,8 +60,7 @@ const components = {
     },
   },
 };
-
-const theme = createTheme({
+export const theme = createTheme({
   components,
   palette: {
     contrastThreshold: 4.5,
@@ -123,13 +68,14 @@ const theme = createTheme({
     primary: {
       main: "#2E4621",
       light: "#88ad4c",
+      contrastText: "#ded8cc",
     },
     secondary: {
       main: "#023047",
       light: "#d1a750",
     },
     error: { main: "#f50057" },
-    gray: {
+    grey: {
       100: "#ece6d4",
       200: "#f3ecfd",
       300: "#6d6875D9",
@@ -150,7 +96,6 @@ const theme = createTheme({
       primary: "#212D45",
       secondary: "#7a798c",
     },
-    contrastText: "#ded8cc",
     divider: "#eadece",
   },
   shape: {
@@ -172,7 +117,7 @@ const theme = createTheme({
       color: "#212D45",
     },
     h2: {
-      fontFamily: "Rosario",
+      fontFamily: "Rosario Variable",
       fontSize: "1.52rem",
       fontWeight: "500",
       color: "#7a798c",

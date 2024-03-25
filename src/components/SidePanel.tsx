@@ -15,7 +15,7 @@ export default function SidePanel() {
       sx={{
         maxWidth: { xs: "350px", xl: "450px" },
         backgroundColor: "secondary.main",
-        color: "gray.100",
+        color: "grey.100",
         height: { xs: "inherit", xl: "100%" },
       }}
     >

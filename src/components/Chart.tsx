@@ -22,7 +22,7 @@ ChartJS.register(
   annotationPlugin
 );
 ChartJS.defaults.set("plugins.datalabels", {
-  color: themeResponsiveFonts.palette.gray["800"],
+  color: themeResponsiveFonts.palette.grey[800],
 });
 
 const jsImage = new Image();
@@ -104,9 +104,6 @@ const data = {
 };
 export default function Chart() {
   console.log(ChartJS, annotationPlugin);
-  return (
-    <>
-      <Bar options={options} data={data} style={{ maxHeight: "300px" }} />
-    </>
-  );
+  // @ts-ignore
+  return <Bar options={options} data={data} style={{ maxHeight: "300px" }} />;
 }

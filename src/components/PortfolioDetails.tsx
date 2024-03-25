@@ -9,7 +9,7 @@ const images = [
     label: "E2E SaSS platform for homeowners and mortgage service providers",
     imgPath: brace,
     description:
-      "I had a part in digitizing an 80 year old federal process from 70+ printed pages to a short, dynamic, all-inclusive web-based form and user site. My responsibilities included developing and maintaining the front-end of the application. I worked closely with the design team to create a seamless product.",
+      "Brace was a SaSS startup, a B2B2C end-to-end loss mitigation default management platform. Homeowners and servicers can complete all necessary tasks in a fraction of the time.  I worked closely with all teams to create a seamless product from a private-label, dynamic consumer application to servicer site that processed each file through final document execution.",
   },
   {
     label: "Cayor Capital",
