@@ -1,6 +1,21 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, styled } from "@mui/material";
 import Box from "@mui/material/Box";
 import { portfolioData } from "../utils/portfolio";
+
+const ProjectContainer = styled("div")<{ index: number }>(
+  ({ theme, index }) => ({
+    display: "flex",
+    flexDirection: `${index % 2 === 0 ? "row" : "row-reverse"}`,
+    flex: `0 0 100%`,
+    alignItems: "center",
+    marginBottom: "3rem",
+    height: "100%",
+    [theme.breakpoints.only("xs")]: {
+      flexDirection: "column",
+    },
+  })
+);
+
 function PortfolioDetails() {
   return (
     <>
@@ -11,7 +26,7 @@ function PortfolioDetails() {
           sx={{
             position: "relative",
             maxWidth: { xs: "100%", xl: "80%" },
-            paddingX: { xs: "1.5rem", sm: "3rem", xl: "6rem" },
+            paddingX: { xs: "2.5rem", sm: "3rem", xl: "6rem" },
             height: "100%",
             backgroundColor: "background.default",
             alignItems: "center",
@@ -19,22 +34,13 @@ function PortfolioDetails() {
           }}
           key={step.label}
         >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: `${index % 2 === 0 ? "row" : "row-reverse"}`,
-              flex: `0 0 100%`,
-              alignItems: "center",
-              marginBottom: "3rem",
-              height: "100%",
-            }}
-          >
+          <ProjectContainer index={index}>
             <Box
               component="img"
               sx={{
                 width: "100%",
                 boxShadow: "inset 0 0 0 0.2rem common.white",
-                height: { xs: "10rem", xl: "13rem" },
+                height: { xs: "auto", sm: "10rem", xl: "13rem" },
                 display: "flex",
                 alignItems: "stretch",
                 justifyContent: "center",
@@ -79,7 +85,7 @@ function PortfolioDetails() {
                 ))}
               </Box>
             </Stack>
-          </div>
+          </ProjectContainer>
         </Stack>
       ))}
     </>

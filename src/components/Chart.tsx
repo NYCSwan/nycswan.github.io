@@ -48,6 +48,8 @@ tsImage.src = typescript;
 const htmlImage = new Image();
 htmlImage.src = Html;
 
+// TODO: Add more skills- DBs like postgres, etc
+
 const options = {
   indexAxis: "y" as const,
   elements: {

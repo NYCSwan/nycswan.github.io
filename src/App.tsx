@@ -12,12 +12,16 @@ import Skills from "./pages/Skills";
 import Contact from "./pages/contact";
 import Portfolio from "./pages/Portfolio";
 import { styled } from "@mui/material/styles";
+import MobileMenu from "./components/MobileMenu";
 
 const TabPanelSubPage = styled(TabPanel)(({ theme }) => ({
   position: "relative",
   backgroundColor: theme.palette.background.paper,
   overflow: "hidden",
   fontFamily: "'Rosario Variable', sans-serif",
+  [theme.breakpoints.only("xs")]: {
+    overflow: "visible",
+  },
 }));
 
 function App() {
@@ -30,25 +34,16 @@ function App() {
         sx={{
           position: "relative",
           display: "flex",
-          flexDirection: "row",
+          flexDirection: { xs: "column", md: "row" },
           width: "inherit",
           height: { xs: "calc(100% - 30px)", md: "calc(100% - 60px)" },
+          marginBottom: { xs: "30px", md: undefined },
         }}
       >
-        <div
-          style={{
-            overflowY: "scroll",
-            width: "auto",
-            minWidth: "350px",
-            padding: 0,
-            margin: 0,
-            scrollbarWidth: "none",
-          }}
-        >
-          <SidePanel pageTopicId={value} />
-        </div>
+        <SidePanel pageTopicId={value} />
         <TabContext value={value}>
           <CustomTabList setValue={setValue} />
+          <MobileMenu setValue={setValue} />
           <TabPanelSubPage value={"0"}>
             <About />
           </TabPanelSubPage>

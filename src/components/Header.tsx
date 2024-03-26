@@ -8,8 +8,8 @@ export default function Header() {
       flexDirection="row"
       sx={{
         justifyContent: "flex-start",
-        maxWidth: { xs: "100px", md: "330px", xl: "400px" },
-        height: "60px",
+        maxWidth: { xs: "80px", sm: "150px", md: "330px", xl: "400px" },
+        height: { xs: "30px", md: "60px" },
       }}
     >
       <img
