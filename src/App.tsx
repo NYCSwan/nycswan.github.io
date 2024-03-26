@@ -32,7 +32,7 @@ function App() {
           display: "flex",
           flexDirection: "row",
           width: "inherit",
-          height: "calc(100% - 60px)",
+          height: { xs: "calc(100% - 30px)", md: "calc(100% - 60px)" },
         }}
       >
         <div
@@ -45,7 +45,7 @@ function App() {
             scrollbarWidth: "none",
           }}
         >
-          <SidePanel />
+          <SidePanel pageTopicId={value} />
         </div>
         <TabContext value={value}>
           <CustomTabList setValue={setValue} />

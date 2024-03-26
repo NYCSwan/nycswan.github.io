@@ -8,7 +8,7 @@ export default function Header() {
       flexDirection="row"
       sx={{
         justifyContent: "flex-start",
-        maxWidth: { xs: "330px", xl: "400px" },
+        maxWidth: { xs: "100px", md: "330px", xl: "400px" },
         height: "60px",
       }}
     >

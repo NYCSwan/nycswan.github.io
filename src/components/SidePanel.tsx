@@ -7,19 +7,28 @@ import {
   Computer,
   GitHub,
 } from "@mui/icons-material";
-
-export default function SidePanel() {
+import headshot from "../assets/headshot.jpg";
+import coworker from "../assets/contact.jpg";
+const imageKey: { [pageTopicId: string]: string } = {
+  "0": headshot,
+  "1": headshot,
+  "2": coworker,
+  "3": meImage,
+  "4": meImage,
+};
+export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
+  const image = imageKey[pageTopicId];
   return (
     <Stack
       flexDirection="column"
       sx={{
-        maxWidth: { xs: "350px", xl: "450px" },
+        maxWidth: { xs: "100%", sm: "350px", xl: "450px" },
         backgroundColor: "secondary.main",
         color: "grey.100",
-        height: "100%",
+        height: { xs: "30%", sm: "100%" },
       }}
     >
-      <img src={meImage} alt="" />
+      <img src={image} alt="" />
       <Stack
         flexDirection="column"
         sx={{
