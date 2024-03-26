@@ -1,5 +1,4 @@
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import ContentContainer from "../components/ContentContainer";
 import PageTitles from "../components/PageTitles";

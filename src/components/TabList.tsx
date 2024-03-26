@@ -1,5 +1,6 @@
 import TabList from "@mui/lab/TabList";
 import Tab from "@mui/material/Tab";
+import { styled } from "@mui/material/styles";
 
 function a11ySxProps(index: number) {
   return {
@@ -13,6 +14,18 @@ function a11ySxProps(index: number) {
     },
   };
 }
+
+const StyledTab = styled(Tab)(({ theme }) => ({
+  textTransform: "none",
+  backgroundColor: theme.palette.primary.main,
+  color: "#EEFEBF",
+  marginRight: "1px",
+  transition: "all 0.2s ease",
+  "&.Mui-active, &.Mui-selected": {
+    backgroundColor: theme.palette.primary.light,
+    color: theme.palette.grey[100],
+  },
+}));
 
 export default function CustomTabList({
   setValue,
@@ -37,8 +50,8 @@ export default function CustomTabList({
         top: { xs: "-60px", xl: "-80px" },
         backgroundColor: "transparent",
         color: "text.secondary",
-        marginLeft: "350px",
-        paddingLeft: "2rem",
+        marginLeft: "375px",
+        // paddingLeft: "2rem",
         width: { xs: "50%", xl: "70%" },
         display: "flex",
         flexDirection: "row",
@@ -46,11 +59,16 @@ export default function CustomTabList({
         alignContent: "center",
       }}
     >
-      <Tab value={"0"} label="About" {...a11ySxProps(0)} />
-      <Tab value={"1"} label="Skills" {...a11ySxProps(1)} />
-      <Tab value={"2"} label="Experience" {...a11ySxProps(2)} />
-      <Tab value={"3"} label="Portfolio" {...a11ySxProps(3)} />
-      <Tab value={"4"} label="Contact" {...a11ySxProps(4)} />
+      <StyledTab
+        value={"0"}
+        label="About"
+        {...a11ySxProps(0)}
+        color="primary"
+      />
+      <StyledTab value={"1"} label="Skills" {...a11ySxProps(1)} />
+      <StyledTab value={"2"} label="Experience" {...a11ySxProps(2)} />
+      <StyledTab value={"3"} label="Portfolio" {...a11ySxProps(3)} />
+      <StyledTab value={"4"} label="Contact" {...a11ySxProps(4)} />
     </TabList>
   );
 }

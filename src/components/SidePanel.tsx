@@ -16,7 +16,7 @@ export default function SidePanel() {
         maxWidth: { xs: "350px", xl: "450px" },
         backgroundColor: "secondary.main",
         color: "grey.100",
-        height: { xs: "inherit", xl: "100%" },
+        height: "100%",
       }}
     >
       <img src={meImage} alt="" />

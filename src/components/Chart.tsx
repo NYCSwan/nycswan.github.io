@@ -1,28 +1,34 @@
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
   BarElement,
+  CategoryScale,
+  Chart as ChartJS,
+  ChartOptions,
+  LinearScale,
+  Title,
   Tooltip,
 } from "chart.js";
+import annotationPlugin from "chartjs-plugin-annotation";
+import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Bar } from "react-chartjs-2";
+import themeResponsiveFonts from "../ThemeOptions";
 import js from "../assets/js.svg";
 import node from "../assets/node.svg";
+import python from "../assets/py-logo.png";
 import react from "../assets/react.svg";
-import themeResponsiveFonts from "../ThemeOptions";
-import ChartDataLabels from "chartjs-plugin-datalabels";
-import annotationPlugin from "chartjs-plugin-annotation";
+import typescript from "../assets/typescript.png";
+import Html from "../assets/html-css.png";
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
   BarElement,
+  Title,
   Tooltip,
   ChartDataLabels,
   annotationPlugin
 );
 ChartJS.defaults.set("plugins.datalabels", {
-  color: themeResponsiveFonts.palette.grey[800],
+  color: themeResponsiveFonts.palette.grey[900],
 });
 
 const jsImage = new Image();
@@ -34,68 +40,102 @@ nodeImage.src = node;
 const reactImage = new Image();
 reactImage.src = react;
 
+const pyImage = new Image();
+pyImage.src = python;
+
+const tsImage = new Image();
+tsImage.src = typescript;
+const htmlImage = new Image();
+htmlImage.src = Html;
+
 const options = {
   indexAxis: "y" as const,
   elements: {
     bar: {
       borderWidth: 1,
+      fontSize: 14,
     },
   },
   responsive: true,
   plugins: {
     datalabels: {
       borderRadius: 4,
+      font: {
+        size: 14,
+      },
     },
     annotation: {
       annotations: {
-        label0: {
+        labelJavascript: {
           type: "label",
-          xValue: 75,
+          xValue: 8.2,
           yValue: 0,
-          content: nodeImage,
-          width: 100,
-          height: "auto",
-          font: {
-            size: 18,
-          },
+          content: jsImage,
+          width: 80,
+          height: 40,
         },
-        label1: {
+        labelReact: {
           type: "label",
-          xValue: 70,
+          xValue: 6.5,
           yValue: 1,
           content: reactImage,
-          width: 80,
+          width: 90,
           height: "auto",
-          font: {
-            size: 18,
-          },
         },
-        label2: {
+        labelHtml: {
           type: "label",
-          xValue: 85,
+          xValue: 8.2,
           yValue: 2,
-          content: jsImage,
-          width: 100,
-          height: 100,
-          font: {
-            size: 18,
-          },
+          content: htmlImage,
+          width: 50,
+          height: 50,
+        },
+        labelTypescript: {
+          type: "label",
+          xValue: 4.5,
+          yValue: 3,
+          content: tsImage,
+          width: 50,
+          height: 50,
+        },
+        labelNode: {
+          type: "label",
+          content: nodeImage,
+          xValue: 4.5,
+          yValue: 4,
+          width: 50,
+          height: 40,
+        },
+        labelPython: {
+          type: "label",
+          xValue: 1.5,
+          yValue: 5,
+          content: pyImage,
+          width: 40,
+          height: 40,
         },
       },
     },
   },
-};
+} as unknown as ChartOptions<"bar">;
 
-const labels = ["Node.js", "React", "Javascript"];
+const labels = [
+  "Javascript",
+  "React",
+  "HTML/CSS",
+  "TypeScript",
+  "Node.js",
+  "Python",
+];
 
 const data = {
   labels,
   datasets: [
     {
-      label: "skills",
-      data: [65, 59, 80, 81, 56],
+      label: "Years of Experience",
+      data: [8, 6, 8, 4, 4, 1],
       min: 0,
-      max: 100,
+      max: 10,
       borderColor: themeResponsiveFonts.palette.secondary.main,
       backgroundColor: themeResponsiveFonts.palette.primary.light,
       showLine: false,
@@ -103,7 +143,5 @@ const data = {
   ],
 };
 export default function Chart() {
-  console.log(ChartJS, annotationPlugin);
-  // @ts-ignore
   return <Bar options={options} data={data} style={{ maxHeight: "300px" }} />;
 }

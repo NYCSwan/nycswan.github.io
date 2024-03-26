@@ -11,6 +11,14 @@ import Experience from "./pages/Experience";
 import Skills from "./pages/Skills";
 import Contact from "./pages/contact";
 import Portfolio from "./pages/Portfolio";
+import { styled } from "@mui/material/styles";
+
+const TabPanelSubPage = styled(TabPanel)(({ theme }) => ({
+  position: "relative",
+  backgroundColor: theme.palette.background.paper,
+  overflow: "hidden",
+  fontFamily: "'Rosario Variable', sans-serif",
+}));
 
 function App() {
   const [value, setValue] = React.useState("0");
@@ -41,21 +49,21 @@ function App() {
         </div>
         <TabContext value={value}>
           <CustomTabList setValue={setValue} />
-          <TabPanel value={"0"}>
+          <TabPanelSubPage value={"0"}>
             <About />
-          </TabPanel>
-          <TabPanel value={"1"}>
+          </TabPanelSubPage>
+          <TabPanelSubPage value={"1"}>
             <Skills />
-          </TabPanel>
-          <TabPanel value={"2"}>
+          </TabPanelSubPage>
+          <TabPanelSubPage value={"2"}>
             <Experience />
-          </TabPanel>
-          <TabPanel value={"3"}>
+          </TabPanelSubPage>
+          <TabPanelSubPage value={"3"}>
             <Portfolio />
-          </TabPanel>
-          <TabPanel value={"4"}>
+          </TabPanelSubPage>
+          <TabPanelSubPage value={"4"}>
             <Contact />
-          </TabPanel>
+          </TabPanelSubPage>
         </TabContext>
       </Box>
     </Layout>

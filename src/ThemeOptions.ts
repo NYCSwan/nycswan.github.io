@@ -4,64 +4,24 @@ import {
   responsiveFontSizes,
 } from "@mui/material/styles";
 
-const components = {
-  MuiButtonBase: {
-    defaultProps: {
-      disableRipple: true,
-    },
-  },
-  MuiButton: {
-    defaultProps: {
-      disableRipple: true,
-    },
-    styleOverrides: {
-      root: {
-        textTransform: "none",
-        backgroundColor: undefined,
+export const theme = createTheme({
+  components: {
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true,
       },
     },
-  },
-  MuiContainer: {
-    styleOverrides: {
-      fixed: {
-        height: "100%",
-        padding: "1rem",
-        verticalAlign: "middle",
-        position: "fixed",
-        top: "25%",
-        width: "80%",
-        left: "10%",
+    MuiButton: {
+      defaultProps: {
+        disableRipple: true,
       },
-    },
-    MuiTabPanel: {
-      styleOverrides: {
-        root: {
-          position: "relative",
-          backgroundColor: "#f5f0f0",
-          overflow: "hidden",
-          fontFamily: "'Rosario Variable', sans-serif",
-        },
-      },
-    },
-    MuiTab: {
       styleOverrides: {
         root: {
           textTransform: "none",
-          backgroundColor: "#2E4621",
-          color: "#EEFEBF",
-          marginRight: "1px",
-          transition: "all 0.2s ease",
-          "&.Mui-active, &.Mui-selected": {
-            backgroundColor: "#88ad4c",
-            color: "#ece6d4",
-          },
         },
       },
     },
   },
-};
-export const theme = createTheme({
-  components,
   palette: {
     contrastThreshold: 4.5,
     mode: "light",
@@ -142,7 +102,7 @@ export const theme = createTheme({
       fontSize: "1rem",
       fontFamily: "Rubik Variable",
       fontWeight: "400",
-      lineHeight: "1.2rem",
+      lineHeight: "1.5rem",
       textAlign: "left",
     },
     body2: {
