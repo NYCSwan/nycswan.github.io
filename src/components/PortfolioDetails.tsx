@@ -1,34 +1,10 @@
 import { Stack, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
-import brace from "../assets/brace-Hero-Shot.jpeg";
-import cayor from "../assets/cayor.png";
-import aeroasis from "../assets/mobile.jpg";
-
-const images = [
-  {
-    label: "E2E SaSS platform for homeowners and mortgage service providers",
-    imgPath: brace,
-    description:
-      "Brace was a SaSS startup, a B2B2C end-to-end loss mitigation default management platform. Homeowners and servicers can complete all necessary tasks in a fraction of the time.  I worked closely with all teams to create a seamless product from a private-label, dynamic consumer application to servicer site that processed each file through final document execution.",
-  },
-  {
-    label: "Cayor Capital",
-    imgPath: cayor,
-    description:
-      "Cayor Capital was an equity fund that specialized in Sub-Saharan Africa. I was responsible for redesigning, building and maintaining their website. I worked closely with their team to create a seamless user experience.",
-  },
-  {
-    label: "Aeroasis",
-    imgPath: aeroasis,
-    description:
-      "Aeroasis was an IOT startup in the AgTech space. I was the sole in-house developer and was responsible for developing and rapid-prototyping the user experience for web and mobile applications.",
-  },
-];
-
+import { portfolioData } from "../utils/portfolio";
 function PortfolioDetails() {
   return (
     <>
-      {images.map((step, index) => (
+      {portfolioData.map((step, index) => (
         <Stack
           spacing={2}
           flexDirection={"column"}
@@ -39,6 +15,7 @@ function PortfolioDetails() {
             height: "100%",
             backgroundColor: "background.default",
             alignItems: "center",
+            marginBottom: "1.5rem",
           }}
           key={step.label}
         >
@@ -73,12 +50,34 @@ function PortfolioDetails() {
             />
             <Stack
               direction={"column"}
-              spacing={1}
+              spacing={2}
               justifyContent="center"
               paddingX={2}
             >
               <Typography variant="h5">{step.label}</Typography>
+              <Typography variant="h4" gutterBottom>
+                {step.subtitle}
+              </Typography>
               <Typography variant="body1">{step.description}</Typography>
+              <Box>
+                {step.tags.map((tag) => (
+                  <Typography
+                    key={tag}
+                    variant="body2"
+                    sx={{
+                      display: "inline",
+                      padding: ".2rem .5rem",
+                      margin: ".2rem",
+                      borderRadius: ".2rem",
+                      backgroundColor: "primary.light",
+                      color: "text.primary",
+                      fontWeight: 600,
+                    }}
+                  >
+                    {tag}
+                  </Typography>
+                ))}
+              </Box>
             </Stack>
           </div>
         </Stack>

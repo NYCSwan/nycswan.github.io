@@ -9,7 +9,7 @@ export default function PageTitles({
   subtitle?: string;
 }) {
   return (
-    <Container sx={{ paddingBottom: "2rem" }}>
+    <Container sx={{ paddingBottom: { xs: "1rem", xl: "1.5rem" } }}>
       <Typography variant="h5" color={"text.secondary"}>
         {subtitle}
       </Typography>

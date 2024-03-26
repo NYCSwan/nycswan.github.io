@@ -12,16 +12,29 @@ export default function About() {
       />
       <ScrollStack>
         <Typography variant="body1">
-          Hey there! Thanks for stopping by. I am a fullstack developer with a
-          unique background in education and the arts. I am passion about
-          creating beautiful, functional, and intuitive user experiences and
-          products.
+          Hey there! Thanks for stopping by.
+        </Typography>
+        <Typography>
+          I am
+          <span
+            style={{
+              fontFamily: "Major Mono Display",
+              color: "inherit",
+            }}
+          >
+            {" "}
+            Megan{" "}
+          </span>
+          a fullstack developer with a unique background in education and the
+          arts. I am passion about creating beautiful, functional, and intuitive
+          user experiences and products.
         </Typography>
         <Typography variant="body1">
           I've been a dev for over 6 years because I love finding solutions for
-          complex real life problems using technology, working on a variety of
-          projects, from web apps to mobile, and even IoT. I love working with
-          all types of clients, from startups to established companies, and even
+          complex real life problems using technology. I have experience working
+          on a variety of projects, from web and mobile apps to IoT. I love
+          working with all types of teams. If it exists, I have probably work
+          with(in) the organizational structure -- startups to agencies and even
           non-profits.
         </Typography>
         <Typography variant="body1">

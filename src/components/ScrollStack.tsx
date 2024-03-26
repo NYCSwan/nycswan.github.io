@@ -7,14 +7,14 @@ export default function ScrollStack({
 }) {
   return (
     <Stack
-      spacing={2}
+      spacing={1}
       direction={"column"}
       sx={{
         position: "relative",
         maxWidth: { xs: "100%", xl: "80%" },
         px: { xs: "1.5rem", sm: "3rem", xl: "4rem" },
         overflowY: "scroll",
-        paddingTop: { xs: "1.5rem", sm: "2rem" },
+        paddingTop: { xs: "1.5rem", xl: "2rem" },
         paddingBottom: { xs: "1.5rem", sm: "2rem", xl: "3rem" },
         scrollbarWidth: "none",
       }}
