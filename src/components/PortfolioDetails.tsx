@@ -1,5 +1,7 @@
-import { Stack, Typography, styled } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 
 const ProjectContainer = styled("div")<{ index: number }>(
   ({ theme, index }) => ({

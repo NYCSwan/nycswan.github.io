@@ -1,5 +1,5 @@
-import { Typography } from "@mui/material";
-import { styled } from "@mui/system";
+import Typography from "@mui/material/Typography";
+import { styled } from "@mui/material/styles";
 
 const StyledMain = styled("main")(({ theme }) => ({
   position: "absolute",

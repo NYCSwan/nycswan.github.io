@@ -1,11 +1,8 @@
-import {
-  Box,
-  Grid,
-  IconButton,
-  Stack,
-  Typography,
-  styled,
-} from "@mui/material";
+import { styled } from "@mui/material/styles";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
 import meImage from "../assets/me-hero.jpg";
 import {
   BorderColor,
@@ -16,6 +13,7 @@ import {
 } from "@mui/icons-material";
 import headshot from "../assets/headshot.jpg";
 import coworker from "../assets/contact.jpg";
+import IconButton from "@mui/material/IconButton";
 
 const ResponsiveDiv = styled("div")(({ theme }) => ({
   overflowY: "scroll",
