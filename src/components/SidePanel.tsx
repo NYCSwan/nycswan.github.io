@@ -16,12 +16,13 @@ import coworker from "../assets/contact.jpg";
 import IconButton from "@mui/material/IconButton";
 
 const ResponsiveDiv = styled("div")(({ theme }) => ({
+  backgroundColor: "secondary.main",
   overflowY: "scroll",
+  overFlowX: "hidden",
   width: "auto",
   padding: 0,
   margin: 0,
   scrollbarWidth: "none",
-  overFlowX: "hidden",
   position: "relative",
   display: "flex",
   [theme.breakpoints.up("xl")]: {
@@ -30,6 +31,7 @@ const ResponsiveDiv = styled("div")(({ theme }) => ({
   },
   [theme.breakpoints.up("md")]: {
     height: "100%",
+    minWidth: "350px",
     maxWidth: "350px",
   },
   [theme.breakpoints.only("sm")]: {
@@ -58,7 +60,6 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
         sx={{
           flexDirection: { xs: "column", sm: "row", md: "column" },
           minWidth: { xs: "100%", sm: "350px", xl: "450px" },
-          backgroundColor: "secondary.main",
           color: "grey.100",
           height: { xs: "auto", sm: "350px", md: "100%" },
           overflowX: "hidden",
