@@ -10,7 +10,7 @@ export default function Portfolio() {
       <PageTitles title="My Portfolio" />
       <ScrollStack>
         {portfolioData.map((step, index) => (
-          <PortfolioDetails data={step} index={index} />
+          <PortfolioDetails key={step.label} data={step} index={index} />
         ))}
       </ScrollStack>
     </ContentContainer>

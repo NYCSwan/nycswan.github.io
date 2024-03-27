@@ -1,10 +1,7 @@
 import Stack from "@mui/material/Stack";
+import { ReactNode } from "react";
 
-export default function ScrollStack({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function ScrollStack({ children }: { children: ReactNode }) {
   return (
     <Stack
       spacing={1}

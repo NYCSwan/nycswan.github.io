@@ -1,5 +1,6 @@
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
+import React from "react";
 
 const StyledMain = styled("main")(({ theme }) => ({
   position: "absolute",

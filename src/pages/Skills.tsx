@@ -13,7 +13,7 @@ export default function Skills() {
 
         <Chart />
         <Typography variant="h2">
-          The 5 C's - Collaboration, Communication, Creativity, Curiosity,
+          The 5 C&apos;s - Collaboration, Communication, Creativity, Curiosity,
           Quirky
         </Typography>
         <Typography variant="body1">

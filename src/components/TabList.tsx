@@ -1,8 +1,9 @@
 import TabList from "@mui/lab/TabList";
 import Tab from "@mui/material/Tab";
 import { styled } from "@mui/material/styles";
+import { SyntheticEvent } from "react";
 
-function a11ySxProps(index: number) {
+function a11ySxProps(index: string) {
   return {
     id: `simple-tab-${index}`,
     "aria-controls": `simple-tabpanel-${index}`,
@@ -32,10 +33,7 @@ export default function CustomTabList({
 }: {
   setValue: (value: string) => void;
 }) {
-  const handleChange = (
-    _event: React.SyntheticEvent<Element, Event>,
-    newValue: string
-  ) => {
+  const handleChange = (_event: SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
 
@@ -61,13 +59,13 @@ export default function CustomTabList({
       <StyledTab
         value={"0"}
         label="About"
-        {...a11ySxProps(0)}
+        {...a11ySxProps("0")}
         color="primary"
       />
-      <StyledTab value={"1"} label="Skills" {...a11ySxProps(1)} />
-      <StyledTab value={"2"} label="Experience" {...a11ySxProps(2)} />
-      <StyledTab value={"3"} label="Portfolio" {...a11ySxProps(3)} />
-      <StyledTab value={"4"} label="Contact" {...a11ySxProps(4)} />
+      <StyledTab value={"1"} label="Skills" {...a11ySxProps("1")} />
+      <StyledTab value={"2"} label="Experience" {...a11ySxProps("2")} />
+      <StyledTab value={"3"} label="Portfolio" {...a11ySxProps("3")} />
+      <StyledTab value={"4"} label="Contact" {...a11ySxProps("4")} />
     </TabList>
   );
 }

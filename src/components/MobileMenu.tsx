@@ -1,16 +1,15 @@
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { useState } from "react";
+import { MouseEvent, useState } from "react";
 
-export default function MobileMenu({
-  setValue,
-}: {
+interface MobileMenuProps {
   setValue: (value: string) => void;
-}) {
+}
+export default function MobileMenu({ setValue }: MobileMenuProps) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = (value: string) => {
@@ -56,11 +55,41 @@ export default function MobileMenu({
           },
         }}
       >
-        <MenuItem onClick={() => handleClose("0")}>About</MenuItem>
-        <MenuItem onClick={() => handleClose("1")}>Skills</MenuItem>
-        <MenuItem onClick={() => handleClose("2")}>Experience</MenuItem>
-        <MenuItem onClick={() => handleClose("3")}>Portfolio</MenuItem>
-        <MenuItem onClick={() => handleClose("4")}>Contact</MenuItem>
+        <MenuItem
+          onClick={() => {
+            handleClose("0");
+          }}
+        >
+          About
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            handleClose("1");
+          }}
+        >
+          Skills
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            handleClose("2");
+          }}
+        >
+          Experience
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            handleClose("3");
+          }}
+        >
+          Portfolio
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            handleClose("4");
+          }}
+        >
+          Contact
+        </MenuItem>
       </Menu>
     </>
   );

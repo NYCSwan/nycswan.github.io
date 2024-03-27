@@ -16,7 +16,7 @@ import coworker from "../assets/contact.jpg";
 import IconButton from "@mui/material/IconButton";
 
 const ResponsiveDiv = styled("div")(({ theme }) => ({
-  backgroundColor: "secondary.main",
+  backgroundColor: theme.palette.secondary.main,
   overflowY: "scroll",
   overFlowX: "hidden",
   width: "auto",
@@ -45,7 +45,7 @@ const ResponsiveDiv = styled("div")(({ theme }) => ({
     },
   },
 }));
-const imageKey: { [pageTopicId: string]: string } = {
+const imageKey: Record<string, string> = {
   "0": headshot,
   "1": headshot,
   "2": coworker,

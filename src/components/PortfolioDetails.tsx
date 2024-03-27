@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 const ProjectContainer = styled("div")<{ index: number }>(
   ({ theme, index }) => ({
     display: "flex",
-    flexDirection: `${index % 2 === 0 ? "row" : "row-reverse"}`,
+    flexDirection: index % 2 === 0 ? "row" : "row-reverse",
     flex: `0 0 100%`,
     alignItems: "center",
     marginBottom: "3rem",
