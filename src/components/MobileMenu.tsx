@@ -45,8 +45,14 @@ export default function MobileMenu({
         MenuListProps={{
           "aria-labelledby": "menu-button",
           sx: {
-            right: "0",
             backgroundColor: "background.default",
+          },
+        }}
+        slotProps={{
+          paper: {
+            sx: {
+              right: "0",
+            },
           },
         }}
       >

@@ -17,10 +17,12 @@ const StyledMain = styled("main")(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     padding: "32px 12px",
     position: "relative",
-    overflow: "scroll",
+    overflowY: "scroll",
   },
   [theme.breakpoints.only("xs")]: {
     height: "100%",
+    paddingBottom: 0,
+    marginBottom: 20,
   },
 }));
 

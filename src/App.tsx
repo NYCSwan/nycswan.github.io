@@ -9,18 +9,20 @@ import CustomTabList from "./components/TabList";
 import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Skills from "./pages/Skills";
-import Contact from "./pages/contact";
 import Portfolio from "./pages/Portfolio";
 import { styled } from "@mui/material/styles";
 import MobileMenu from "./components/MobileMenu";
+import Contact from "./pages/ContactMe";
 
 const TabPanelSubPage = styled(TabPanel)(({ theme }) => ({
   position: "relative",
   backgroundColor: theme.palette.background.paper,
   overflow: "hidden",
   fontFamily: "'Rosario Variable', sans-serif",
+  width: "fit-content",
   [theme.breakpoints.only("xs")]: {
     overflow: "visible",
+    height: "100%",
   },
 }));
 

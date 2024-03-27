@@ -20,12 +20,22 @@ import coworker from "../assets/contact.jpg";
 const ResponsiveDiv = styled("div")(({ theme }) => ({
   overflowY: "scroll",
   width: "auto",
-  minWidth: "350px",
   padding: 0,
   margin: 0,
   scrollbarWidth: "none",
-  [theme.breakpoints.up("sm")]: {
-    display: "block",
+  overFlowX: "hidden",
+  position: "relative",
+  display: "flex",
+  [theme.breakpoints.up("xl")]: {
+    maxWidth: "450px",
+    minWidth: "450px",
+  },
+  [theme.breakpoints.up("md")]: {
+    height: "100%",
+    maxWidth: "350px",
+  },
+  [theme.breakpoints.only("sm")]: {
+    width: "100%",
   },
   [theme.breakpoints.only("xs")]: {
     minWidth: "150px",
@@ -53,6 +63,7 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
           backgroundColor: "secondary.main",
           color: "grey.100",
           height: { xs: "auto", sm: "350px", md: "100%" },
+          overflowX: "hidden",
         }}
       >
         <img src={image} alt="" />
@@ -61,8 +72,8 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
           sx={{
             padding: "2rem 1rem",
             height: "100%",
-            justifyContent: "center",
-            width: "100%",
+            justifyContent: { xs: "center", sm: "flex-start" },
+            width: { xs: "100%", sm: "inherit" }, //fix me
           }}
         >
           <Typography
@@ -72,7 +83,7 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
               fontFamily: "Major Mono Display",
               fontWeight: 700,
             }}
-            textAlign="center"
+            textAlign={{ xs: "center", sm: "left" }}
             gutterBottom
           >
             General Info
