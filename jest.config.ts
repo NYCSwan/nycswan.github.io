@@ -6,27 +6,27 @@
 import type { Config } from "jest";
 
 const config: Config = {
-  // All imported modules in your tests should be mocked automatically
-  // automock: false,
-
-  // Stop running tests after `n` failures
-  // bail: 0,
-
-  // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "/private/var/folders/7_/21_1nhj17f1f6vvdv4l37z7h0000gn/T/jest_dx",
-
+  preset: "ts-jest",
+  testEnvironment: "jest-environment-jsdom",
+  transform: {
+    "^.+\\.tsx?$": "ts-jest",
+    // process `*.tsx` files with `ts-jest`
+  },
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
-
   // Indicates whether the coverage information should be collected while executing the test
   collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   // collectCoverageFrom: undefined,
-
+  rootDir: "src",
   // The directory where Jest should output its coverage files
   coverageDirectory: "coverage",
-
+  moduleNameMapper: {
+    "\\.(svg|png|jpg|jpeg)$": "<rootDir>/utils/__mocks__/imageMock.js",
+    "^@app/(.*)$": "<rootDir>/$1",
+    "\\.css$": "identity-obj-proxy",
+  },
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
   //   "/node_modules/"
@@ -73,9 +73,7 @@ const config: Config = {
   // maxWorkers: "50%",
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  // moduleDirectories: [
-  //   "node_modules"
-  // ],
+  moduleDirectories: ["node_modules", "utils", "<rootDir>"],
 
   // An array of file extensions your modules use
   // moduleFileExtensions: [
@@ -129,7 +127,7 @@ const config: Config = {
   // roots: [
   //   "<rootDir>"
   // ],
-
+  verbose: true,
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",
 
@@ -145,9 +143,6 @@ const config: Config = {
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
 
-  // The test environment that will be used for testing
-  testEnvironment: "jsdom",
-
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
 
@@ -155,10 +150,10 @@ const config: Config = {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  // testMatch: [
-  //   "**/__tests__/**/*.[jt]s?(x)",
-  //   "**/?(*.)+(spec|test).[tj]s?(x)"
-  // ],
+  testMatch: [
+    "**/__tests__/**/*.[jt]s?(x)",
+    //   "**/?(*.)+(spec|test).[tj]s?(x)"
+  ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [

@@ -1,9 +1,10 @@
-import React, { ReactElement } from "react";
+import { ReactNode, ReactElement } from "react";
 import { render, RenderOptions } from "@testing-library/react";
 import { ThemeProvider } from "@mui/material/styles";
+import themeResponsiveFonts from "@app/ThemeOptions";
 
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
-  return <ThemeProvider theme="light">{children}</ThemeProvider>;
+const AllTheProviders = ({ children }: { children: ReactNode }) => {
+  return <ThemeProvider theme={themeResponsiveFonts}>{children}</ThemeProvider>;
 };
 
 const customRender = (

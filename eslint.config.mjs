@@ -29,8 +29,10 @@ export default [
     languageOptions: {
       globals: {
         ...globals.jest,
+        NODE_ENV: "test",
       },
     },
     ignores: ["dist", "node_modules/**", "eslint.config.mjs"],
   },
 ];
+// TODO finish testing the components, babel error ?
