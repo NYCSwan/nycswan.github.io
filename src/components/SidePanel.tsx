@@ -57,8 +57,10 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
   return (
     <ResponsiveDiv>
       <Stack
+        data-testid="side-panel"
         sx={{
           flexDirection: { xs: "column", sm: "row", md: "column" },
+          maxWidth: { xs: "100%", sm: "350px", xl: "450px" },
           minWidth: { xs: "100%", sm: "350px", xl: "450px" },
           color: "grey.100",
           height: { xs: "auto", sm: "350px", md: "100%" },

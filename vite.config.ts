@@ -8,6 +8,5 @@ export default defineConfig({
   root: ".",
   build: {
     chunkSizeWarningLimit: 1024,
-    outDir: "../dist",
   },
 });

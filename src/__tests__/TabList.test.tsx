@@ -30,10 +30,7 @@ describe("TabList", () => {
 
     const tabElement = screen.getByRole("tab", { name: /Skills/i });
     await user.click(tabElement);
-    // fireEvent.click(tabElement);
-    console.log(tabElement);
 
-    // expect(tabElement).toHaveAttribute("aria-selected", "true");
     expect(setValueMock).toHaveBeenCalledTimes(1);
   });
 });
