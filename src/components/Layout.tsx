@@ -9,11 +9,12 @@ const StyledMain = styled("main")(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
   textAlign: "left",
   overflow: "hidden",
-  [theme.breakpoints.up("xl")]: {
-    padding: "40px 80px 45px 60px",
-  },
   [theme.breakpoints.up("lg")]: {
     padding: "40px 40px 45px 40px",
+  },
+  [theme.breakpoints.only("xl")]: {
+    padding: "40px 80px 45px 60px",
+    width: "initial",
   },
   [theme.breakpoints.down("md")]: {
     padding: "32px 12px",
@@ -22,6 +23,10 @@ const StyledMain = styled("main")(({ theme }) => ({
     height: "calc(100% - 32px)",
     paddingBottom: 0,
     marginBottom: 20,
+    scrollbarWidth: "none",
+    "&::-webkit-scrollbar": {
+      display: "none",
+    },
   },
 }));
 

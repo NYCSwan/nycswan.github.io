@@ -25,14 +25,14 @@ const ResponsiveDiv = styled("div")(({ theme }) => ({
   scrollbarWidth: "none",
   position: "relative",
   display: "flex",
-  [theme.breakpoints.up("xl")]: {
-    maxWidth: "450px",
-    minWidth: "450px",
-  },
   [theme.breakpoints.up("md")]: {
     height: "100%",
     minWidth: "350px",
     maxWidth: "350px",
+  },
+  [theme.breakpoints.only("xl")]: {
+    maxWidth: "450px",
+    minWidth: "450px",
   },
   [theme.breakpoints.only("sm")]: {
     width: "100%",
@@ -110,7 +110,7 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
                 Email:
               </Typography>
               <Typography variant="h5" align="center">
-                Web:
+                CV:
               </Typography>
             </Grid>
             <Grid item xs={8} gap={1}>
@@ -122,14 +122,14 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
               <Typography
                 lineHeight={"40px"}
                 component={"a"}
-                href="www.nycswan.github.io"
+                href="https://www.canva.com/design/DAFuP4YLEL8/jVnXC53RyIhKeiIvr37B6g/view?utm_content=DAFuP4YLEL8&utm_campaign=designshare&utm_medium=link&utm_source=editor"
                 sx={{
                   textDecoration: "none",
                   color: "inherit",
                   fontSize: "inherit",
                 }}
               >
-                nycswan.github.io
+                My resume
               </Typography>
             </Grid>
           </Grid>
