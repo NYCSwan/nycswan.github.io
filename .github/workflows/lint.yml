@@ -10,9 +10,5 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 20
-      - run: |
-          cd frontend
-          npm ci --legacy-peer-deps
-      - run: |
-          cd frontend
-          npm run lint
+      - run: npm ci
+      - run: npm run lint
