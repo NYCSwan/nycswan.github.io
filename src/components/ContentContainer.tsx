@@ -16,6 +16,7 @@ const ContentContainer = styled(Stack)(({ theme }) => ({
     paddingY: "1rem",
     paddingX: "0.5rem",
     width: "100%",
+    height: "100%",
   },
   [theme.breakpoints.only("xs")]: {
     height: undefined,

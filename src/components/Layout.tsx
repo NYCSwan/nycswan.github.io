@@ -19,9 +19,7 @@ const StyledMain = styled("main")(({ theme }) => ({
     padding: "32px 12px",
     position: "relative",
     overflowY: "scroll",
-  },
-  [theme.breakpoints.only("xs")]: {
-    height: "100%",
+    height: "calc(100% - 32px)",
     paddingBottom: 0,
     marginBottom: 20,
   },
@@ -33,7 +31,7 @@ const StyledStickyFooter = styled("footer")(({ theme }) => ({
   position: "absolute",
   bottom: 12,
   left: "40%",
-  [theme.breakpoints.only("xs")]: {
+  [theme.breakpoints.down("md")]: {
     bottom: 0,
     position: "fixed",
     left: "8%",

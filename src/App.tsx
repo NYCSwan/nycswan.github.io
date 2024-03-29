@@ -20,7 +20,7 @@ const TabPanelSubPage = styled(TabPanel)(({ theme }) => ({
   overflow: "hidden",
   fontFamily: "'Rosario Variable', sans-serif",
   width: "fit-content",
-  [theme.breakpoints.only("xs")]: {
+  [theme.breakpoints.down("md")]: {
     overflow: "visible",
     height: "100%",
   },

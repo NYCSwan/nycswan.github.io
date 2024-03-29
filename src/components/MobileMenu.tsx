@@ -8,6 +8,7 @@ interface MobileMenuProps {
 }
 export default function MobileMenu({ setValue }: MobileMenuProps) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+
   const open = Boolean(anchorEl);
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);

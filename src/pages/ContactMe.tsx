@@ -24,7 +24,7 @@ export default function Contact() {
         <Typography variant="h5" gutterBottom>
           Enjoy working with an awesome person and teammate
         </Typography>
-        <Stack height="100%" flexDirection="column" alignItems={"center"}>
+        <Stack flexDirection="column" alignItems={"center"}>
           <Typography variant="h5">
             Find me on{" "}
             <a href="https://www.linkedin.com/in/megan-swanby">Linked-in</a>

@@ -44,6 +44,9 @@ const ResponsiveDiv = styled("div")(({ theme }) => ({
       maxHeight: "150px",
     },
   },
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
 }));
 const imageKey: Record<string, string> = {
   "0": headshot,
@@ -60,8 +63,8 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
         data-testid="side-panel"
         sx={{
           flexDirection: { xs: "column", sm: "row", md: "column" },
-          maxWidth: { xs: "100%", sm: "350px", xl: "450px" },
-          minWidth: { xs: "100%", sm: "350px", xl: "450px" },
+          maxWidth: { xs: "100%", md: "350px", xl: "450px" },
+          minWidth: { xs: "100%", md: "350px", xl: "450px" },
           color: "grey.100",
           height: { xs: "auto", sm: "350px", md: "100%" },
           overflowX: "hidden",
@@ -72,9 +75,9 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
           flexDirection={"column"}
           sx={{
             padding: "2rem 1rem",
-            height: "100%",
+            height: { xs: "auto", md: "100%" },
             justifyContent: { xs: "center", sm: "flex-start" },
-            width: { xs: "100%", sm: "inherit" }, //fix me
+            width: { xs: "100%", md: "inherit" },
           }}
         >
           <Typography
@@ -116,7 +119,18 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
               <Typography lineHeight={"40px"}>
                 megan.swanby@gmail.com
               </Typography>
-              <Typography lineHeight={"40px"}>www.meganswanby.com</Typography>
+              <Typography
+                lineHeight={"40px"}
+                component={"a"}
+                href="www.nycswan.github.io"
+                sx={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  fontSize: "inherit",
+                }}
+              >
+                nycswan.github.io
+              </Typography>
             </Grid>
           </Grid>
           <Box sx={{ height: "35px", paddingTop: 2, alignSelf: "center" }}>
