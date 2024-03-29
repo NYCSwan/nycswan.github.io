@@ -29,7 +29,7 @@ export default [
     languageOptions: {
       globals: {
         ...globals.jest,
-        NODE_ENV: "test",
+        NODE_ENV: "readonly",
       },
     },
     ignores: ["dist", "node_modules/**", "eslint.config.mjs"],

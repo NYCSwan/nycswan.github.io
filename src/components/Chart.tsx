@@ -45,6 +45,7 @@ pyImage.src = python;
 
 const tsImage = new Image();
 tsImage.src = typescript;
+
 const htmlImage = new Image();
 htmlImage.src = Html;
 
@@ -70,51 +71,51 @@ const options = {
       annotations: {
         labelJavascript: {
           type: "label",
-          xValue: 8.2,
+          xValue: 8.3,
           yValue: 0,
           content: jsImage,
-          width: 80,
-          height: 40,
+          width: 60,
+          height: 30,
         },
         labelReact: {
           type: "label",
           xValue: 6.5,
           yValue: 1,
           content: reactImage,
-          width: 90,
+          width: 70,
           height: "auto",
         },
         labelHtml: {
           type: "label",
-          xValue: 8.2,
+          xValue: 8.3,
           yValue: 2,
           content: htmlImage,
-          width: 50,
-          height: 50,
+          width: 40,
+          height: 40,
         },
         labelTypescript: {
           type: "label",
           xValue: 4.5,
           yValue: 3,
           content: tsImage,
-          width: 50,
-          height: 50,
+          width: 35,
+          height: 35,
         },
         labelNode: {
           type: "label",
           content: nodeImage,
           xValue: 4.5,
           yValue: 4,
-          width: 50,
-          height: 40,
+          width: 40,
+          height: 35,
         },
         labelPython: {
           type: "label",
-          xValue: 1.5,
+          xValue: 2.5,
           yValue: 5,
           content: pyImage,
-          width: 40,
-          height: 40,
+          width: 35,
+          height: 35,
         },
       },
     },
@@ -128,6 +129,9 @@ const labels = [
   "TypeScript",
   "Node.js",
   "Python",
+  "SQL",
+  "Postrgresql",
+  "Ruby on Rails",
 ];
 
 const data = {
@@ -135,7 +139,7 @@ const data = {
   datasets: [
     {
       label: "Years of Experience",
-      data: [8, 6, 8, 4, 4, 1],
+      data: [8, 6, 8, 4, 4, 2, 6, 6, 2],
       min: 0,
       max: 10,
       borderColor: themeResponsiveFonts.palette.secondary.main,

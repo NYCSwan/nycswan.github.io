@@ -25,14 +25,14 @@ const ResponsiveDiv = styled("div")(({ theme }) => ({
   scrollbarWidth: "none",
   position: "relative",
   display: "flex",
-  [theme.breakpoints.up("xl")]: {
-    maxWidth: "450px",
-    minWidth: "450px",
-  },
   [theme.breakpoints.up("md")]: {
     height: "100%",
     minWidth: "350px",
     maxWidth: "350px",
+  },
+  [theme.breakpoints.only("xl")]: {
+    maxWidth: "450px",
+    minWidth: "450px",
   },
   [theme.breakpoints.only("sm")]: {
     width: "100%",
@@ -43,6 +43,9 @@ const ResponsiveDiv = styled("div")(({ theme }) => ({
     "> img": {
       maxHeight: "150px",
     },
+  },
+  "&::-webkit-scrollbar": {
+    display: "none",
   },
 }));
 const imageKey: Record<string, string> = {
@@ -60,8 +63,8 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
         data-testid="side-panel"
         sx={{
           flexDirection: { xs: "column", sm: "row", md: "column" },
-          maxWidth: { xs: "100%", sm: "350px", xl: "450px" },
-          minWidth: { xs: "100%", sm: "350px", xl: "450px" },
+          maxWidth: { xs: "100%", md: "350px", xl: "450px" },
+          minWidth: { xs: "100%", md: "350px", xl: "450px" },
           color: "grey.100",
           height: { xs: "auto", sm: "350px", md: "100%" },
           overflowX: "hidden",
@@ -72,9 +75,9 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
           flexDirection={"column"}
           sx={{
             padding: "2rem 1rem",
-            height: "100%",
+            height: { xs: "auto", md: "100%" },
             justifyContent: { xs: "center", sm: "flex-start" },
-            width: { xs: "100%", sm: "inherit" }, //fix me
+            width: { xs: "100%", md: "inherit" },
           }}
         >
           <Typography
@@ -107,7 +110,7 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
                 Email:
               </Typography>
               <Typography variant="h5" align="center">
-                Web:
+                CV:
               </Typography>
             </Grid>
             <Grid item xs={8} gap={1}>
@@ -116,7 +119,18 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
               <Typography lineHeight={"40px"}>
                 megan.swanby@gmail.com
               </Typography>
-              <Typography lineHeight={"40px"}>www.meganswanby.com</Typography>
+              <Typography
+                lineHeight={"40px"}
+                component={"a"}
+                href="https://www.canva.com/design/DAFuP4YLEL8/jVnXC53RyIhKeiIvr37B6g/view?utm_content=DAFuP4YLEL8&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+                sx={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  fontSize: "inherit",
+                }}
+              >
+                My resume
+              </Typography>
             </Grid>
           </Grid>
           <Box sx={{ height: "35px", paddingTop: 2, alignSelf: "center" }}>

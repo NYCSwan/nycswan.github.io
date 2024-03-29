@@ -7,7 +7,7 @@ const ContentContainer = styled(Stack)(({ theme }) => ({
   paddingY: "1rem",
   height: "100%",
   width: "calc(100%-350px)",
-  [theme.breakpoints.up("xl")]: {
+  [theme.breakpoints.only("xl")]: {
     width: "calc(100%-450px)",
     paddingX: "4rem",
     paddingY: "2rem",
@@ -16,6 +16,7 @@ const ContentContainer = styled(Stack)(({ theme }) => ({
     paddingY: "1rem",
     paddingX: "0.5rem",
     width: "100%",
+    height: "100%",
   },
   [theme.breakpoints.only("xs")]: {
     height: undefined,

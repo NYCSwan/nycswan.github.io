@@ -9,21 +9,24 @@ const StyledMain = styled("main")(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
   textAlign: "left",
   overflow: "hidden",
-  [theme.breakpoints.up("xl")]: {
-    padding: "40px 80px 45px 60px",
-  },
   [theme.breakpoints.up("lg")]: {
     padding: "40px 40px 45px 40px",
+  },
+  [theme.breakpoints.only("xl")]: {
+    padding: "40px 80px 45px 60px",
+    width: "initial",
   },
   [theme.breakpoints.down("md")]: {
     padding: "32px 12px",
     position: "relative",
     overflowY: "scroll",
-  },
-  [theme.breakpoints.only("xs")]: {
-    height: "100%",
+    height: "calc(100% - 32px)",
     paddingBottom: 0,
     marginBottom: 20,
+    scrollbarWidth: "none",
+    "&::-webkit-scrollbar": {
+      display: "none",
+    },
   },
 }));
 
@@ -33,7 +36,7 @@ const StyledStickyFooter = styled("footer")(({ theme }) => ({
   position: "absolute",
   bottom: 12,
   left: "40%",
-  [theme.breakpoints.only("xs")]: {
+  [theme.breakpoints.down("md")]: {
     bottom: 0,
     position: "fixed",
     left: "8%",
