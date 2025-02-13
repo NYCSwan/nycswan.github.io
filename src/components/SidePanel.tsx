@@ -1,6 +1,6 @@
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import meImage from "../assets/me-hero.jpg";
@@ -14,6 +14,7 @@ import {
 import headshot from "../assets/headshot.jpg";
 import coworker from "../assets/contact.jpg";
 import IconButton from "@mui/material/IconButton";
+import Paper from "@mui/material/Paper";
 
 const ResponsiveDiv = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,
@@ -48,6 +49,7 @@ const ResponsiveDiv = styled("div")(({ theme }) => ({
     display: "none",
   },
 }));
+
 const imageKey: Record<string, string> = {
   "0": headshot,
   "1": headshot,
@@ -67,7 +69,7 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
           minWidth: { xs: "100%", md: "350px", xl: "450px" },
           color: "grey.100",
           height: { xs: "auto", sm: "350px", md: "100%" },
-          overflowX: "hidden",
+          scrollbarWidth: "none",
         }}
       >
         <img src={image} alt="" />
@@ -93,13 +95,13 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
             General Info
           </Typography>
           <Grid container paddingTop={"1rem"}>
-            <Grid item xs={1}>
+            <Grid size={1}>
               <BorderColor sx={{ height: "35px" }} />
               <StarPurple500 sx={{ height: "35px" }} />
               <ContactMail sx={{ height: "35px" }} />
               <Computer sx={{ height: "35px" }} />
             </Grid>
-            <Grid item xs={3}>
+            <Grid size={3}>
               <Typography variant="h5" align="center">
                 Name:
               </Typography>
@@ -113,7 +115,7 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
                 CV:
               </Typography>
             </Grid>
-            <Grid item xs={8} gap={1}>
+            <Grid size={8} gap={1}>
               <Typography lineHeight={"40px"}>Megan Swanby</Typography>
               <Typography lineHeight={"40px"}>Washington, DC</Typography>
               <Typography lineHeight={"40px"}>
@@ -139,7 +141,7 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
             </IconButton>
             <IconButton
               color="inherit"
-              href="https://www.linkedin.com/in/meganswanby"
+              href="https://www.linkedin.com/in/megan-swanby"
             >
               <ContactMail />
             </IconButton>

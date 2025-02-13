@@ -1,5 +1,5 @@
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import ContentContainer from "../components/ContentContainer";
 import PageTitles from "../components/PageTitles";
 import React from "react";
@@ -19,7 +19,7 @@ export default function Experience() {
           {professionalResume.map(
             ({ dates, position, company, description }) => (
               <React.Fragment key={dates}>
-                <Grid item xs={4}>
+                <Grid size={4}>
                   <Typography
                     variant="body1"
                     fontFamily="Major Mono Display"
@@ -35,7 +35,7 @@ export default function Experience() {
                     {company}
                   </Typography>
                 </Grid>
-                <Grid item xs={7}>
+                <Grid size={7}>
                   <Typography
                     variant="h2"
                     color={"primary.light"}

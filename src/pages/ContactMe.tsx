@@ -30,7 +30,7 @@ export default function Contact() {
             <a href="https://www.linkedin.com/in/megan-swanby">Linked-in</a>
           </Typography>
           <Typography variant="h5" marginTop={0}>
-            OR <a href="https://www.linkedin.com/in/megan-swanby">Github!</a>
+            OR <a href="https://www.github.com/nycswan">Github!</a>
           </Typography>
         </Stack>
       </ScrollStack>

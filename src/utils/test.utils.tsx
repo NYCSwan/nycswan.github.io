@@ -9,7 +9,7 @@ const AllTheProviders = ({ children }: { children: ReactNode }) => {
 };
 
 const customRender = (
-  ui: ReactElement,
+  ui: ReactElement<any>,
   options?: Omit<RenderOptions, "wrapper">
 ) => render(ui, { wrapper: AllTheProviders, ...options });
 

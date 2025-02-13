@@ -35,7 +35,8 @@ export default function About() {
           working on a variety of projects, from web and mobile apps to IoT. I
           love working with all types of teams. If it exists, I have probably
           worked with(in) the organizational structure -- startups to agencies
-          and even non-profits.
+          and even non-profits! I most recently tried my hand as a startup
+          founder after having a caretaker
         </Typography>
         <Typography variant="body1">
           I&apos;m a startup evangelist, technology nerd, former public school
