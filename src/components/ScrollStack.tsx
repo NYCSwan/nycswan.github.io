@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 export default function ScrollStack({ children }: { children: ReactNode }) {
   return (
     <Stack
-      spacing={1}
+      spacing={2}
       direction={"column"}
       sx={{
         position: "relative",

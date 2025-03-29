@@ -12,7 +12,7 @@ export default function Experience() {
       <PageTitles title={"My Experience"} subtitle="where I excel" />
       <ScrollStack>
         <Typography variant="h3" align="center" gutterBottom>
-          Insightful, Proactive, Product-obsessed
+          Insightful, Proactive, Outcome-obsessed
         </Typography>
 
         <Grid container rowGap={5} columnGap={3} columnSpacing={2} pt={2}>

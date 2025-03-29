@@ -49,7 +49,7 @@ export default function CustomTabList({
         backgroundColor: "transparent",
         color: "text.secondary",
         marginLeft: "375px",
-        width: { xs: "50%", xl: "70%" },
+        width: { xs: "50%", lg: "60%", xl: "70%" },
         display: { xs: "none", md: "flex" },
         flexDirection: "row",
         flexWrap: "nowrap",

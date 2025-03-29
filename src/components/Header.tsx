@@ -9,7 +9,7 @@ export default function Header() {
       sx={{
         justifyContent: "flex-start",
         maxWidth: { xs: "80px", sm: "150px", md: "330px", xl: "400px" },
-        height: { xs: "30px", md: "60px" },
+        height: { xs: "30px", md: "50px" },
       }}
     >
       <img

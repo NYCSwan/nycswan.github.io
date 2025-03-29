@@ -1,10 +1,24 @@
 [
   {
+    "dates": "2025 - Present",
+    "position": "Volunteer",
+    "company": "Iona Senior Living",
+    "description": "I am currently volunteering.",
+    "tags": ["Activities", "Elder care", "Memory care"]
+  },
+  {
+    "dates": "2024",
+    "position": "Caregiver",
+    "company": "",
+    "description": "...",
+    "tags": ["Elder care", "Memory care", "Dementia"]
+  },
+  {
     "dates": "Spring 2021 - Fall 2023",
-    "position": "Senior Software Engineer & Front-End Tech Leadership",
+    "position": "Senior Software Engineer & Tech Leadership",
     "company": "Brace.ai",
-    "description": "Over four years, I  participated in all aspects of product development lifecycle from planning through execution. I was responsible for developing and maintaining the front-end of each application, working closely with the design team to create seamless user experiences. Most recently, as part of the tech leadership team, I planned, developed, executed, and maintained aspects of a software development life cycle for the frontend/UX with the goal to design and develop robust, scalable, and secure solutions, ensuring high performance and user satisfaction. ",
-    "tags": ["HTML/CSS", "React", "Typescript", "Redux", "highCharts"]
+    "description": "Over four years, I  participated in all aspects of product development lifecycle from planning through execution! I was responsible for developing and maintaining the front-end of each application, working closely with the design team to create seamless user experiences. Most recently, as part of the tech leadership team, I planned, developed, executed, and maintained aspects of a software development life cycle for the frontend/UX with the goal to design and develop robust, scalable, and secure solutions, ensuring high performance and user satisfaction. ",
+    "tags": ["Team leadership", "Stategic Planning", "", "Redux", "highCharts"]
   },
   {
     "dates": "Fall 2019 - Spring 2021",
