@@ -27,10 +27,16 @@ export default function About() {
           </span>
         </Typography>
         <Typography>
-          With a unique background in education, technology and the arts, I am
-          passionate about creating beautiful, functional, and intuitive
-          experiences online and in person. A jack of all trades, master of none
-          is better than master of one!
+          My career has always been driven by curiosity, problem-solving, and a
+          desire to make a meaningful impact. With a background in software
+          development, community outreach, and organizational management,
+          I&apos;ve built solutions, streamlined operations, and connected
+          people with the resources they need. But when I became my
+          father&apos;s caregiver, my perspective on work and purpose shifted.
+          That experience reinforced my strengths in adaptability, empathy, and
+          creative problem-solving — skills that naturally align with senior
+          care. I am passionate about creating beautiful, functional, and
+          meaningful experiences online and in person.
         </Typography>
 
         <Typography variant="body1">
@@ -43,6 +49,17 @@ export default function About() {
           with(in) the organizational structure -- startups to agencies and even
           non-profits! I most recently tried my hand as a startup founder after
           having a caretaker
+        </Typography>
+        <Typography variant="body1">
+          Now, I&apos;m channeling that expertise into creating engaging,
+          enriching experiences for older adults while continuing to develop
+          software projects that improve accessibility and quality of life. I
+          thrive at the intersection of technology and human connection, using
+          strategic thinking and hands-on collaboration to support both
+          individuals and organizations. Whether through program development,
+          technology solutions, or direct engagement, I&apos;m committed to
+          fostering environments where seniors feel valued, supported, and
+          empowered.
         </Typography>
         <Typography variant="body1">
           I&apos;m a startup evangelist, technology nerd, former public school

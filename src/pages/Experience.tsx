@@ -9,10 +9,14 @@ import professionalResume from "../utils/experience.json";
 export default function Experience() {
   return (
     <ContentContainer>
-      <PageTitles title={"My Experience"} subtitle="where I excel" />
+      <PageTitles
+        title={"My Experience"}
+        subtitle="A balance artist in the face of 
+          competing and conflicting needs and responsibilities"
+      />
       <ScrollStack>
         <Typography variant="h3" align="center" gutterBottom>
-          Insightful, Proactive, Outcome-obsessed
+          Insightful, Proactive, Outcome-obssessed.
         </Typography>
 
         <Grid container rowGap={5} columnGap={3} columnSpacing={2} pt={2}>

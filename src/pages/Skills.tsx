@@ -8,7 +8,11 @@ import { Stack } from "@mui/material";
 export default function Skills() {
   return (
     <ContentContainer>
-      <PageTitles title={"My Skills"} />
+      <PageTitles
+        title={"My Skills"}
+        subtitle="Jack of all trades, master of none
+          is better than master of one!"
+      />
       <ScrollStack>
         <Stack spacing={2}>
           <Typography variant="h2">
@@ -18,7 +22,7 @@ export default function Skills() {
           <Typography variant="body1">
             No project or team can be successful without deliberate, clear
             communcation and collaboration. I pride myself on my collaboration.
-            I can quickly and efficiently join your team .
+            I can quickly and effectively join your team.
           </Typography>
           <Typography variant="body1">
             As a former teacher, I take advantage of any opportunity to share my
