@@ -103,6 +103,7 @@ export const theme = createTheme({
       fontFamily: "Rubik Variable",
       fontWeight: "400",
       lineHeight: "1.5rem",
+      letterSpacing: "0.2px",
       textAlign: "left",
     },
     body2: {

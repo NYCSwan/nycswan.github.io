@@ -1,5 +1,5 @@
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid2";
+import Grid from "@mui/material/Grid";
 import ContentContainer from "../components/ContentContainer";
 import PageTitles from "../components/PageTitles";
 import React from "react";

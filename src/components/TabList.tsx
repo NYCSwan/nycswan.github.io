@@ -8,7 +8,6 @@ function a11ySxProps(index: string) {
   return {
     id: `simple-tab-${index}`,
     "aria-controls": `simple-tab-${index}`,
-    sx: {},
   };
 }
 
@@ -18,7 +17,10 @@ const StyledTab = styled(Tab)(({ theme }) => ({
   color: "#EEFEBF",
   marginRight: "1px",
   transition: "all 0.2s ease",
-
+  minHeight: theme.breakpoints.only("xl") ? 80 : 60,
+  "&:hover": {
+    backgroundColor: theme.palette.primary.dark,
+  },
   "&.Mui-active, &.Mui-selected": {
     backgroundColor: theme.palette.primary.light,
     color: theme.palette.grey[100],
@@ -41,7 +43,6 @@ export default function CustomTabList({
       centered
       sx={{
         position: "absolute",
-        height: { xs: "60px", xl: "80px" },
         px: { xs: "2rem", xl: "3rem" },
         fontSize: { xs: "1rem", xl: "1.25rem" },
         fontWeight: "400",

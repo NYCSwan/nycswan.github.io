@@ -1,20 +1,19 @@
-import { styled } from "@mui/material/styles";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid2";
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
-import meImage from "../assets/me-hero.jpg";
 import {
   BorderColor,
-  StarPurple500,
-  ContactMail,
   Computer,
+  ContactMail,
   GitHub,
+  StarPurple500,
 } from "@mui/icons-material";
-import headshot from "../assets/headshot.jpg";
-import coworker from "../assets/contact.jpg";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
-import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
+import { styled } from "@mui/material/styles";
+import Typography from "@mui/material/Typography";
+import coworker from "../assets/contact.jpg";
+import headshot from "../assets/headshot.jpg";
+import meImage from "../assets/me-hero.jpg";
 
 const ResponsiveDiv = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,
