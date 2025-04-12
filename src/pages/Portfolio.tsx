@@ -23,12 +23,11 @@ export default function Portfolio() {
           </Typography>
           <br />
           <Typography variant="body1">
-            Now, I&apos;m bringing those same skills to senior care—designing
-            activities, improving communication, and creating meaningful
-            experiences that make life easier, more engaging, and a little
-            brighter for older adults. Whether online or in person, I&apos;m
-            passionate about building experiences that are useful, beautiful,
-            and leave people feeling seen, supported, and valued.
+            Now, I&apos;m bringing those same skills to senior care, creating
+            meaningful experiences that make life easier, more engaging, and a
+            little brighter for older adults. Whether online or in person,
+            I&apos;m passionate about building experiences that are useful,
+            beautiful, and leave people feeling seen, supported, and valued.
           </Typography>
         </Box>
         {portfolioData.map((step, index) => (

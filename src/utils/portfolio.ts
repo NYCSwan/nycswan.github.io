@@ -2,6 +2,7 @@ import brace from "../assets/brace-Hero-Shot.jpeg";
 import cayor from "../assets/cayor.png";
 import aeroasis from "../assets/mobile.jpg";
 import caretaker from "../assets/caregiverToolkit.jpg";
+import edu from "../assets/edu.jpg";
 
 export const portfolioData = [
   {
@@ -58,7 +59,7 @@ export const portfolioData = [
   {
     label: "NYC Dept Of Education",
     subtitle: "Community Outreach, Advocacy, and Management",
-    imgPath: caretaker,
+    imgPath: edu,
     description:
       "I was a classroom teacher for students with disabilities. In addition to traditional teaching duties, I was responsible for creating and implementing individualized education plans (IEPs), involved families to ensure their child's educational potential, and I worked hard to ensure that they received the support they needed.",
     tags: ["HTML/CSS", "React", "Python", "Django", "PostgreSQL"],

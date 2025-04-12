@@ -29,7 +29,7 @@ export default function Skills() {
             knowledge and can often be found answering questions for technical
             and non-technical teammates. I am dedicated to continuously learning
             -- building on my education background, I am a fantastic asset for
-            your team or teaching myself a new programming language.
+            your team.
           </Typography>
         </Stack>
         <Stack spacing={2} sx={{ marginTop: 16, marginBottom: 16 }}>

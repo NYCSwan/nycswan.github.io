@@ -123,7 +123,7 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
               <Typography
                 lineHeight={"40px"}
                 component={"a"}
-                href="https://www.canva.com/design/DAFuP4YLEL8/jVnXC53RyIhKeiIvr37B6g/view?utm_content=DAFuP4YLEL8&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+                href="https://www.canva.com/design/DAGhhabG-3Y/G1D_1BCTU5GXW9_fJ1K2dA/view?utm_content=DAGhhabG-3Y&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd9e28bd51d"
                 sx={{
                   textDecoration: "none",
                   color: "inherit",
