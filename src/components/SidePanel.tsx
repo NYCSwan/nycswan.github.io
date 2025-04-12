@@ -25,7 +25,7 @@ const ResponsiveDiv = styled("div")(({ theme }) => ({
   scrollbarWidth: "none",
   position: "relative",
   display: "flex",
-  [theme.breakpoints.up("md")]: {
+  [theme.breakpoints.up("lg")]: {
     height: "100%",
     minWidth: "350px",
     maxWidth: "350px",
@@ -34,18 +34,29 @@ const ResponsiveDiv = styled("div")(({ theme }) => ({
     maxWidth: "450px",
     minWidth: "450px",
   },
+  [theme.breakpoints.down("md")]: {
+    overflowY: "visible",
+  },
   [theme.breakpoints.only("sm")]: {
     width: "100%",
   },
   [theme.breakpoints.only("xs")]: {
     minWidth: "150px",
-    overflowY: "visible",
     "> img": {
       maxHeight: "150px",
     },
   },
   "&::-webkit-scrollbar": {
     display: "none",
+  },
+}));
+const ResponsiveImage = styled("img")(({ theme }) => ({
+  [theme.breakpoints.down("sm")]: {
+    width: "fit-content",
+    height: "250px",
+    alignSelf: "center",
+    marginTop: "1rem",
+    borderRadius: "25px",
   },
 }));
 
@@ -71,11 +82,11 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
           scrollbarWidth: "none",
         }}
       >
-        <img src={image} alt="" />
+        <ResponsiveImage src={image} alt="" />
         <Stack
           flexDirection={"column"}
           sx={{
-            padding: "2rem 1rem",
+            padding: { xs: "0.5rem 1rem", md: "2rem 1rem" },
             height: { xs: "auto", md: "100%" },
             justifyContent: { xs: "center", sm: "flex-start" },
             width: { xs: "100%", md: "inherit" },
@@ -84,11 +95,12 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
           <Typography
             color="secondary.light"
             sx={{
-              fontSize: { xs: "1.75rem", xl: "2rem" },
+              display: { xs: "none", md: "flex" },
+              fontSize: { md: "1.75rem", xl: "2rem" },
               fontFamily: "Major Mono Display",
               fontWeight: 700,
             }}
-            textAlign={{ xs: "center", sm: "left" }}
+            textAlign="center"
             gutterBottom
           >
             General Info
@@ -134,7 +146,14 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
               </Typography>
             </Grid>
           </Grid>
-          <Box sx={{ height: "35px", paddingTop: 2, alignSelf: "center" }}>
+          <Box
+            sx={{
+              display: { xs: "none", md: "block" },
+              height: "35px",
+              paddingTop: 2,
+              alignSelf: "center",
+            }}
+          >
             <IconButton href="https://www.github.com/nycswan" color="inherit">
               <GitHub />
             </IconButton>

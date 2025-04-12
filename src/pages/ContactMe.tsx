@@ -8,13 +8,9 @@ import ScrollStack from "../components/ScrollStack";
 export default function Contact() {
   return (
     <ContentContainer>
-      <PageTitles
-        title="We should chat if you ..."
-        subtitle="where you can find me"
-      />
       <Typography
         variant="body1"
-        width={"70%"}
+        width={{ xs: "100%", md: "70%" }}
         align="center"
         alignSelf={"center"}
         marginTop={2}
@@ -23,8 +19,12 @@ export default function Contact() {
         manager. I&apos;m always up for a challenge, get in touch if you&apos;d
         like a great partner!
       </Typography>
-      <ScrollStack direction="row">
-        <Stack flexDirection="column" width={"45%"}>
+      <PageTitles
+        title="We should chat if you ..."
+        subtitle="where you can find me"
+      />
+      <ScrollStack direction={{ xs: "column", md: "row" }}>
+        <Stack flexDirection="column" width={{ xs: "100%", md: "45%" }}>
           <Typography variant="h5">
             Want an administrator with diverse skills, expertise, and creative
             solutions for person-centered senior care?
@@ -43,13 +43,17 @@ export default function Contact() {
             Enjoy working with an awesome person and teammate?
           </Typography>
         </Stack>
-        <Stack flexDirection="column" justifyContent={"center"} width={"45%"}>
+        <Stack
+          flexDirection="column"
+          justifyContent={"center"}
+          width={{ xs: "100%", md: "45%" }}
+        >
           <Box
             bgcolor={"primary.light"}
             padding={2}
             borderRadius={2}
-            alignSelf={"flex-end"}
-            width={"50%"}
+            alignSelf={{ xs: "center", md: "flex-end" }}
+            width={{ xs: "80%", md: "45%" }}
             alignContent={"center"}
           >
             <Typography variant="h5">Find me on: </Typography>

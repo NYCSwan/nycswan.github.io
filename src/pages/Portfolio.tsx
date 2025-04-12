@@ -11,7 +11,7 @@ export default function Portfolio() {
     <ContentContainer>
       <PageTitles title="My Portfolio" subtitle="what I have built" />
       <ScrollStack>
-        <Box sx={{ padding: "0 2rem" }}>
+        <Box sx={{ padding: { xs: 0, md: "0 2rem 1rem 2rem" } }}>
           <Typography variant="body1">
             Curiosity, problem-solving meaningful solutions, and a good cup of
             coffee have fueled my career so far. I have worn many hats -

@@ -3,10 +3,10 @@ import { ReactNode } from "react";
 
 export default function ScrollStack({
   children,
-  direction = "column",
+  direction = { xs: "column" },
 }: {
   children: ReactNode;
-  direction?: "row" | "column";
+  direction?: { [key in "xs" | "md" | "lg"]?: "row" | "column" };
 }) {
   return (
     <Stack

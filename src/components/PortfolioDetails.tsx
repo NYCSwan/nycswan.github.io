@@ -11,7 +11,7 @@ const ProjectContainer = styled("div")<{ index: number }>(
     alignItems: "center",
     marginBottom: "3rem",
     height: "100%",
-    [theme.breakpoints.only("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },
   })
@@ -37,11 +37,13 @@ function PortfolioDetails({
       flexDirection={"column"}
       sx={{
         position: "relative",
+        width: { xs: "100%", xl: "80%" },
         maxWidth: { xs: "100%", xl: "80%" },
-        paddingX: { xs: "2.5rem", sm: "3rem", xl: "6rem" },
+        paddingX: { xs: 0, md: "3rem", xl: "6rem" },
         height: "100%",
         backgroundColor: "background.default",
-        alignItems: "center",
+        alignItems: { xs: "flex-start", lg: "center" },
+        boxShadow: "rgba(0, 0, 0, 0.25) 0px 18px 40px -8px",
         marginBottom: "1.5rem",
       }}
       key={label}
@@ -50,15 +52,15 @@ function PortfolioDetails({
         <Box
           component="img"
           sx={{
+            display: { xs: "none", md: "flex" },
             width: "100%",
             boxShadow: "inset 0 0 0 0.2rem common.white",
-            height: { xs: "auto", sm: "10rem", xl: "13rem" },
-            display: "flex",
+            height: { md: "auto", xl: "13rem" },
             alignItems: "stretch",
             justifyContent: "center",
             borderRadius: ".5rem",
-            "&:hover": {
-              transform: "scale(1.5)",
+            "&:hover, &:active": {
+              transform: "scale3d(2.5, 1.2, 0.3)",
               overflow: "visible",
               zIndex: 999,
             },
@@ -70,7 +72,7 @@ function PortfolioDetails({
           direction={"column"}
           spacing={2}
           justifyContent="center"
-          paddingX={2}
+          padding={2}
         >
           <Typography variant="h5">{label}</Typography>
           <Typography variant="h4" gutterBottom>

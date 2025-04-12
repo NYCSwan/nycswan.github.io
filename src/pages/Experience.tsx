@@ -23,7 +23,7 @@ export default function Experience() {
           {professionalResume.map(
             ({ dates, position, company, description }) => (
               <React.Fragment key={dates}>
-                <Grid size={4}>
+                <Grid size={{ xs: 12, md: 4 }}>
                   <Typography
                     variant="body1"
                     fontFamily="Major Mono Display"
@@ -31,15 +31,17 @@ export default function Experience() {
                   >
                     {dates}
                   </Typography>
-                  <Typography
-                    variant="body1"
-                    color={"primary.main"}
-                    align="right"
-                  >
-                    {company}
-                  </Typography>
+                  {!!company.length && (
+                    <Typography
+                      variant="body1"
+                      color={"primary.main"}
+                      align="right"
+                    >
+                      {company}
+                    </Typography>
+                  )}
                 </Grid>
-                <Grid size={7}>
+                <Grid size={{ xs: 12, md: 7 }}>
                   <Typography
                     variant="h2"
                     color={"primary.light"}
