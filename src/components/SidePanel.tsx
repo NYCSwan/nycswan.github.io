@@ -107,19 +107,19 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
           </Typography>
           <Grid container paddingTop={"1rem"}>
             <Grid size={1}>
-              <BorderColor sx={{ height: "35px" }} />
-              <StarPurple500 sx={{ height: "35px" }} />
-              <ContactMail sx={{ height: "35px" }} />
-              <Computer sx={{ height: "35px" }} />
+              <BorderColor sx={{ height: "23%" }} />
+              <StarPurple500 sx={{ height: "23%" }} />
+              <ContactMail sx={{ height: "23%" }} />
+              <Computer sx={{ height: "23%" }} />
             </Grid>
             <Grid size={3}>
-              <Typography variant="h5" align="center">
+              <Typography variant="h5" align="center" sx={{ height: "25%" }}>
                 Name:
               </Typography>
-              <Typography align="center" variant="h5">
+              <Typography align="center" variant="h5" sx={{ height: "25%" }}>
                 Loc:
               </Typography>
-              <Typography align="center" variant="h5">
+              <Typography align="center" variant="h5" sx={{ height: "25%" }}>
                 Email:
               </Typography>
               <Typography variant="h5" align="center">
