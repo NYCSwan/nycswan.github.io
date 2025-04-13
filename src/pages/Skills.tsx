@@ -21,7 +21,7 @@ export default function Skills() {
           </Typography>
           <Typography variant="body1">
             No project or team can be successful without deliberate, clear
-            communcation and collaboration. I pride myself on my collaboration.
+            communication and collaboration. I pride myself on my collaboration.
             I can quickly and effectively join your team.
           </Typography>
           <Typography variant="body1">

@@ -16,7 +16,7 @@ export default function Experience() {
       />
       <ScrollStack>
         <Typography variant="h3" align="center" gutterBottom>
-          Insightful, Proactive, Outcome-obssessed.
+          Insightful, Proactive, Outcome-obsessed.
         </Typography>
 
         <Grid container rowGap={5} columnGap={3} columnSpacing={2} pt={2}>
