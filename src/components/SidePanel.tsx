@@ -1,19 +1,19 @@
-import { styled } from "@mui/material/styles";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
-import meImage from "../assets/me-hero.jpg";
 import {
   BorderColor,
-  StarPurple500,
-  ContactMail,
   Computer,
+  ContactMail,
   GitHub,
+  StarPurple500,
 } from "@mui/icons-material";
-import headshot from "../assets/headshot.jpg";
-import coworker from "../assets/contact.jpg";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
+import { styled } from "@mui/material/styles";
+import Typography from "@mui/material/Typography";
+import coworker from "../assets/contact.jpg";
+import headshot from "../assets/headshot.jpg";
+import meImage from "../assets/me-hero.jpg";
 
 const ResponsiveDiv = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,
@@ -25,7 +25,7 @@ const ResponsiveDiv = styled("div")(({ theme }) => ({
   scrollbarWidth: "none",
   position: "relative",
   display: "flex",
-  [theme.breakpoints.up("md")]: {
+  [theme.breakpoints.up("lg")]: {
     height: "100%",
     minWidth: "350px",
     maxWidth: "350px",
@@ -34,12 +34,14 @@ const ResponsiveDiv = styled("div")(({ theme }) => ({
     maxWidth: "450px",
     minWidth: "450px",
   },
+  [theme.breakpoints.down("md")]: {
+    overflowY: "visible",
+  },
   [theme.breakpoints.only("sm")]: {
     width: "100%",
   },
   [theme.breakpoints.only("xs")]: {
     minWidth: "150px",
-    overflowY: "visible",
     "> img": {
       maxHeight: "150px",
     },
@@ -48,6 +50,16 @@ const ResponsiveDiv = styled("div")(({ theme }) => ({
     display: "none",
   },
 }));
+const ResponsiveImage = styled("img")(({ theme }) => ({
+  [theme.breakpoints.down("sm")]: {
+    width: "fit-content",
+    height: "250px",
+    alignSelf: "center",
+    marginTop: "1rem",
+    borderRadius: "25px",
+  },
+}));
+
 const imageKey: Record<string, string> = {
   "0": headshot,
   "1": headshot,
@@ -67,14 +79,14 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
           minWidth: { xs: "100%", md: "350px", xl: "450px" },
           color: "grey.100",
           height: { xs: "auto", sm: "350px", md: "100%" },
-          overflowX: "hidden",
+          scrollbarWidth: "none",
         }}
       >
-        <img src={image} alt="" />
+        <ResponsiveImage src={image} alt="" />
         <Stack
           flexDirection={"column"}
           sx={{
-            padding: "2rem 1rem",
+            padding: { xs: "0.5rem 1rem", md: "2rem 1rem" },
             height: { xs: "auto", md: "100%" },
             justifyContent: { xs: "center", sm: "flex-start" },
             width: { xs: "100%", md: "inherit" },
@@ -83,37 +95,38 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
           <Typography
             color="secondary.light"
             sx={{
-              fontSize: { xs: "1.75rem", xl: "2rem" },
+              display: { xs: "none", md: "flex" },
+              fontSize: { md: "1.75rem", xl: "2rem" },
               fontFamily: "Major Mono Display",
               fontWeight: 700,
             }}
-            textAlign={{ xs: "center", sm: "left" }}
+            textAlign="center"
             gutterBottom
           >
             General Info
           </Typography>
           <Grid container paddingTop={"1rem"}>
-            <Grid item xs={1}>
-              <BorderColor sx={{ height: "35px" }} />
-              <StarPurple500 sx={{ height: "35px" }} />
-              <ContactMail sx={{ height: "35px" }} />
-              <Computer sx={{ height: "35px" }} />
+            <Grid size={1}>
+              <BorderColor sx={{ height: "23%" }} />
+              <StarPurple500 sx={{ height: "23%" }} />
+              <ContactMail sx={{ height: "23%" }} />
+              <Computer sx={{ height: "23%" }} />
             </Grid>
-            <Grid item xs={3}>
-              <Typography variant="h5" align="center">
+            <Grid size={3}>
+              <Typography variant="h5" align="center" sx={{ height: "25%" }}>
                 Name:
               </Typography>
-              <Typography align="center" variant="h5">
+              <Typography align="center" variant="h5" sx={{ height: "25%" }}>
                 Loc:
               </Typography>
-              <Typography align="center" variant="h5">
+              <Typography align="center" variant="h5" sx={{ height: "25%" }}>
                 Email:
               </Typography>
               <Typography variant="h5" align="center">
                 CV:
               </Typography>
             </Grid>
-            <Grid item xs={8} gap={1}>
+            <Grid size={8} gap={1}>
               <Typography lineHeight={"40px"}>Megan Swanby</Typography>
               <Typography lineHeight={"40px"}>Washington, DC</Typography>
               <Typography lineHeight={"40px"}>
@@ -122,7 +135,7 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
               <Typography
                 lineHeight={"40px"}
                 component={"a"}
-                href="https://www.canva.com/design/DAFuP4YLEL8/jVnXC53RyIhKeiIvr37B6g/view?utm_content=DAFuP4YLEL8&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+                href="https://www.canva.com/design/DAGhhabG-3Y/G1D_1BCTU5GXW9_fJ1K2dA/view?utm_content=DAGhhabG-3Y&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd9e28bd51d"
                 sx={{
                   textDecoration: "none",
                   color: "inherit",
@@ -133,13 +146,20 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
               </Typography>
             </Grid>
           </Grid>
-          <Box sx={{ height: "35px", paddingTop: 2, alignSelf: "center" }}>
+          <Box
+            sx={{
+              display: { xs: "none", md: "block" },
+              height: "35px",
+              paddingTop: 2,
+              alignSelf: "center",
+            }}
+          >
             <IconButton href="https://www.github.com/nycswan" color="inherit">
               <GitHub />
             </IconButton>
             <IconButton
               color="inherit"
-              href="https://www.linkedin.com/in/meganswanby"
+              href="https://www.linkedin.com/in/megan-swanby"
             >
               <ContactMail />
             </IconButton>

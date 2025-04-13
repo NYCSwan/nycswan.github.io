@@ -9,17 +9,21 @@ import professionalResume from "../utils/experience.json";
 export default function Experience() {
   return (
     <ContentContainer>
-      <PageTitles title={"My Experience"} subtitle="where I excel" />
+      <PageTitles
+        title={"My Experience"}
+        subtitle="A balance artist in the face of 
+          competing and conflicting needs and responsibilities"
+      />
       <ScrollStack>
         <Typography variant="h3" align="center" gutterBottom>
-          Insightful, Proactive, Product-obsessed
+          Insightful, Proactive, Outcome-obsessed.
         </Typography>
 
         <Grid container rowGap={5} columnGap={3} columnSpacing={2} pt={2}>
           {professionalResume.map(
             ({ dates, position, company, description }) => (
               <React.Fragment key={dates}>
-                <Grid item xs={4}>
+                <Grid size={{ xs: 12, md: 4 }}>
                   <Typography
                     variant="body1"
                     fontFamily="Major Mono Display"
@@ -27,15 +31,17 @@ export default function Experience() {
                   >
                     {dates}
                   </Typography>
-                  <Typography
-                    variant="body1"
-                    color={"primary.main"}
-                    align="right"
-                  >
-                    {company}
-                  </Typography>
+                  {!!company.length && (
+                    <Typography
+                      variant="body1"
+                      color={"primary.main"}
+                      align="right"
+                    >
+                      {company}
+                    </Typography>
+                  )}
                 </Grid>
-                <Grid item xs={7}>
+                <Grid size={{ xs: 12, md: 7 }}>
                   <Typography
                     variant="h2"
                     color={"primary.light"}

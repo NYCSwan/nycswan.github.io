@@ -1,11 +1,17 @@
 import Stack from "@mui/material/Stack";
 import { ReactNode } from "react";
 
-export default function ScrollStack({ children }: { children: ReactNode }) {
+export default function ScrollStack({
+  children,
+  direction = { xs: "column" },
+}: {
+  children: ReactNode;
+  direction?: { [key in "xs" | "md" | "lg"]?: "row" | "column" };
+}) {
   return (
     <Stack
-      spacing={1}
-      direction={"column"}
+      spacing={2}
+      direction={direction}
       sx={{
         position: "relative",
         maxWidth: { xs: "100%", xl: "80%" },

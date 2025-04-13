@@ -33,6 +33,7 @@ const StyledMain = styled("main")(({ theme }) => ({
 const StyledStickyFooter = styled("footer")(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
+  alignContent: "center",
   position: "absolute",
   bottom: 12,
   left: "40%",
@@ -49,7 +50,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {children}
       <StyledStickyFooter>
         <Typography variant="body2" marginRight={8}>
-          created by Megan Swanby
+          created by Megan Swanby {new Date().getFullYear()}
         </Typography>
 
         <Typography variant="body2">

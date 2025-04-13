@@ -14,3 +14,5 @@
 Single Page Application built using React + TypeScript + Vite. Styled with MUI and tested with eslint, jest and react-testing-library.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+design templates: <https://preview.colorlib.com/#vcard2>
