@@ -128,7 +128,7 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
             </Grid>
             <Grid size={8} gap={1}>
               <Typography lineHeight={"40px"}>Megan Swanby</Typography>
-              <Typography lineHeight={"40px"}>Washington, DC</Typography>
+              <Typography lineHeight={"40px"}>NC</Typography>
               <Typography lineHeight={"40px"}>
                 megan.swanby@gmail.com
               </Typography>
