@@ -15,9 +15,9 @@ export default function Contact() {
         alignSelf={"center"}
         marginTop={2}
       >
-        I&apos;m a technology nerd, former public school teacher, and non-profit
-        manager. I&apos;m always up for a challenge, get in touch if you&apos;d
-        like a great partner!
+        I&apos;m a technology nerd, former public school special education
+        teacher, and non-profit manager. I&apos;m always up for a challenge, get
+        in touch if you&apos;d like a great partner!
       </Typography>
       <PageTitles
         title="We should chat if you ..."
@@ -27,7 +27,7 @@ export default function Contact() {
         <Stack flexDirection="column" width={{ xs: "100%", md: "45%" }}>
           <Typography variant="h5">
             Want an administrator with diverse skills, expertise, and creative
-            solutions for person-centered senior care?
+            solutions for person-directed senior care?
           </Typography>
           <Typography variant="h5">
             Are you looking for an experienced developer with a broad skillset?

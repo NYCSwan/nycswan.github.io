@@ -27,9 +27,9 @@ export default function About() {
           </span>
         </Typography>
         <Typography variant="body1">
-          After more than 6 years as a software engineer, finding solutions for
+          After more than 7 years as a software engineer, finding solutions for
           complex real life problems using technology, I took on an additional
-          role, as a caregiver for my dad who developed memory issues. It was a
+          role as a caregiver for my dad who developed dementia. It was a
           challenging and rewarding experience that transformed my professional
           path. I learned to navigate the complexities of caregiving, and wanted
           to apply my expertise to help others in similar situations.
@@ -43,7 +43,8 @@ export default function About() {
         <Typography variant="body1">
           Currently, I&apos;m channeling that expertise into creating engaging,
           enriching experiences for older adults while continuing to develop
-          software projects that improve accessibility and quality of life.
+          software projects that improve accessibility and quality of life for
+          seniors and adults with memory issues.
         </Typography>
         <Typography variant="body1">
           I thrive at the intersection of technology and human connection, using
