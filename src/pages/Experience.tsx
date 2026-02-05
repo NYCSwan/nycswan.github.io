@@ -53,7 +53,7 @@ export default function Experience() {
                   <Typography variant="body1">{description}</Typography>
                 </Grid>
               </React.Fragment>
-            )
+            ),
           )}
         </Grid>
       </ScrollStack>

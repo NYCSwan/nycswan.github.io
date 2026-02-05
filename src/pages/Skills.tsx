@@ -32,8 +32,9 @@ export default function Skills() {
             your team.
           </Typography>
         </Stack>
-        <Stack spacing={2} sx={{ marginTop: 16, marginBottom: 16 }}>
-          <Typography variant="h2">Hands on Experience</Typography>
+
+        <Stack spacing={2}>
+          <Typography variant="h2">Tech Stack</Typography>
           <Typography variant="body1">
             Design and development go hand-in-hand. If technology is not made
             accessable through thoughtful user-focused design, it will never
@@ -44,10 +45,6 @@ export default function Skills() {
             I have extensive experience with accessability and responsive
             design.
           </Typography>
-        </Stack>
-        <Stack spacing={2}>
-          <Typography variant="h2">Tech Stack</Typography>
-
           <Chart />
         </Stack>
       </ScrollStack>

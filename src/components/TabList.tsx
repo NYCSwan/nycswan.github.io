@@ -79,6 +79,11 @@ export default function CustomTabList({
         {...a11ySxProps("3")}
       />
       <StyledTab
+        value={"5"}
+        label={<Typography>Freebies</Typography>}
+        {...a11ySxProps("5")}
+      />
+      <StyledTab
         value={"4"}
         label={<Typography>Contact</Typography>}
         {...a11ySxProps("4")}
