@@ -13,6 +13,7 @@ export default function ScrollStack({
       spacing={2}
       direction={direction}
       sx={{
+        alignSelf: "center",
         position: "relative",
         maxWidth: { xs: "100%", xl: "80%" },
         px: { xs: "1.5rem", sm: "3rem", xl: "4rem" },

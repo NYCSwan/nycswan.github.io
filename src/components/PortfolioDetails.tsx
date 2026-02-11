@@ -14,7 +14,7 @@ const ProjectContainer = styled("div")<{ index: number }>(
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },
-  })
+  }),
 );
 
 function PortfolioDetails({
@@ -43,7 +43,7 @@ function PortfolioDetails({
         height: "100%",
         backgroundColor: "background.default",
         alignItems: { xs: "flex-start", lg: "center" },
-        boxShadow: "rgba(0, 0, 0, 0.25) 0px 18px 40px -8px",
+        boxShadow: 4,
         marginBottom: "1.5rem",
       }}
       key={label}
