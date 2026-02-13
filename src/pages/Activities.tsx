@@ -3,7 +3,7 @@ import ContentContainer from "../components/ContentContainer";
 import PageTitles from "../components/PageTitles";
 import { styled } from "@mui/material/styles";
 import ScrollStack from "../components/ScrollStack";
-import activityBags from "../utils/activityBags.json";
+import { activityBags } from "../utils/activityBags";
 
 const ResponsiveImage = styled("img")(({ theme }) => ({
   maxHeight: "200px",
