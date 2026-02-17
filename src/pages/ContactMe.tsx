@@ -8,23 +8,13 @@ import ScrollStack from "../components/ScrollStack";
 export default function Contact() {
   return (
     <ContentContainer>
-      <Typography
-        variant="body1"
-        width={{ xs: "100%", md: "70%" }}
-        align="center"
-        alignSelf={"center"}
-        marginTop={2}
-      >
-        I&apos;m a technology nerd, former public school special education
-        teacher, and non-profit manager. I&apos;m always up for a challenge, get
-        in touch if you&apos;d like a great partner!
-      </Typography>
       <PageTitles
         title="We should chat if you ..."
         subtitle="where you can find me"
       />
+
       <ScrollStack direction={{ xs: "column", md: "row" }}>
-        <Stack flexDirection="column" width={{ xs: "100%", md: "45%" }}>
+        <Stack flexDirection="column" width={{ xs: "100%", md: "35%" }}>
           <Typography variant="h5">
             Want an administrator with diverse skills, expertise, and creative
             solutions for person-directed senior care?
@@ -56,6 +46,18 @@ export default function Contact() {
             width={{ xs: "80%", md: "45%" }}
             alignContent={"center"}
           >
+            <Typography
+              variant="h5"
+              width={{ xs: "100%" }}
+              align="center"
+              alignSelf={"center"}
+              marginTop={2}
+              marginBottom={2}
+            >
+              I&apos;m a technology nerd and non-profit manager driven by
+              curiosity. I&apos;m always up for a challenge, get in touch if
+              you&apos;d like a great partner!
+            </Typography>
             <Typography variant="h5">Find me on: </Typography>
             <Typography variant="h5" align="center">
               <a href="https://www.linkedin.com/in/megan-swanby">Linked-in</a>
@@ -65,6 +67,12 @@ export default function Contact() {
             </Typography>
             <Typography variant="h5" align="center">
               <a href="https://www.github.com/nycswan">Github</a>
+            </Typography>
+            <Typography variant="h5" marginTop={0} align="center">
+              or
+            </Typography>
+            <Typography variant="h5" align="center">
+              Email
             </Typography>
           </Box>
         </Stack>

@@ -14,7 +14,7 @@ export default function Skills() {
             Curious, Quirky"
       />
       <ScrollStack>
-        <Stack spacing={2} maxWidth={"70%"} alignSelf={"center"}>
+        <Stack spacing={2} maxWidth={"70%"} alignSelf={"left"}>
           <Typography variant="h5">
             1. Strategic Intelligence + Systems Thinking
           </Typography>
@@ -25,13 +25,13 @@ export default function Skills() {
             several steps ahead to keep folks safe and well.
           </Typography>
           <Typography variant="h5">
-            2. Unusual Breadth and Depth of Experience
+            2. Breadth and Depth of Experience
           </Typography>
           <Typography variant="body1">
             I bring cross-disciplinary fluency: care work, operations,
-            technology, program design, communication, and leadership. That lets
-            me translate between clinicians, aides, administrators, families,
-            and participants without losing meaning.
+            technology, program design, communication, and leadership. I can
+            translate between clinicians, aides, administrators, families, and
+            participants without losing meaning.
           </Typography>
           <Typography variant="h5">
             3. <b>Cultural</b> Humility and Relational Awareness

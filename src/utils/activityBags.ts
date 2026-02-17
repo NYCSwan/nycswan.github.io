@@ -1,3 +1,4 @@
+import activity1 from "../assets/act1.jpg";
 // import activity3 from "../assets/act3.png";
 // import activity4 from "../assets/act4.png";
 // import activity5 from "../assets/act5.png";
@@ -5,13 +6,13 @@
 // import activity7 from "../assets/act7.png";
 import activity8 from "../assets/act8.png";
 import activity9 from "../assets/act9.png";
-// import activity10 from "../assets/act10.png";
+import activity10 from "../assets/goddess.jpg";
 
 export const activityBags = [
   {
     title: "A Sense of Comfort",
     description: "",
-    imageUrl: activity8,
+    imageUrl: activity1,
     documentLink: "#",
   },
   {
@@ -27,7 +28,13 @@ export const activityBags = [
     documentLink: "#",
   },
   {
-    title: "Museum Curator",
+    title: "Photo Hunt",
+    description: "",
+    imageUrl: activity9,
+    documentLink: "#",
+  },
+  {
+    title: "Day at the Museum",
     description: "",
     imageUrl: "act6.png",
     documentLink: "#",
@@ -45,9 +52,9 @@ export const activityBags = [
     documentLink: "#",
   },
   {
-    title: "Photo Shoot",
+    title: "Picture This!",
     description: "",
-    imageUrl: "act10.png",
+    imageUrl: activity10,
     documentLink: "#",
   },
 ];

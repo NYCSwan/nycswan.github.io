@@ -1,21 +1,10 @@
-import { Box, Link, Stack, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import ContentContainer from "../components/ContentContainer";
 import PageTitles from "../components/PageTitles";
-import { styled } from "@mui/material/styles";
 import ScrollStack from "../components/ScrollStack";
 import { activityBags } from "../utils/activityBags";
+import ActivityCard from "../components/ActivityCard";
 
-const ResponsiveImage = styled("img")(({ theme }) => ({
-  maxHeight: "200px",
-  width: "fit-content",
-  padding: "1rem",
-  [theme.breakpoints.down("sm")]: {
-    height: "100px",
-    alignSelf: "center",
-    marginTop: "1rem",
-    borderRadius: "25px",
-  },
-}));
 export default function Activities() {
   return (
     <ContentContainer>
@@ -34,6 +23,7 @@ export default function Activities() {
             display: "flex",
             flexDirection: "column",
             alignContent: "center",
+            alignItems: "center",
           }}
         >
           <Typography variant="h4" gutterBottom>
@@ -51,35 +41,13 @@ export default function Activities() {
           <div>
             {activityBags.map(
               ({ title, description, imageUrl, documentLink }) => (
-                <Stack
-                  useFlexGap
-                  sx={{
-                    width: { sm: "100%", md: "60%" },
-                    alignSelf: "center",
-                    border: 3,
-                    borderColor: "secondary.main",
-                    marginTop: "1rem",
-                    padding: "1rem 2rem",
-                    borderRadius: "1rem",
-                    backgroundColor: "background.default",
-                    boxShadow: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignContent: "center",
-                  }}
-                >
-                  <ResponsiveImage src={imageUrl} />
-                  <Typography variant="body1">{title}</Typography>
-                  <Typography variant="body1">{description}</Typography>
-                  <Link
-                    underline="none"
-                    target="_blank"
-                    href={documentLink}
-                    rel="noopener"
-                  >
-                    Learn More!
-                  </Link>
-                </Stack>
+                <ActivityCard
+                  key={title}
+                  title={title}
+                  description={description}
+                  imageUrl={imageUrl}
+                  documentLink={documentLink}
+                />
               ),
             )}
           </div>
@@ -88,4 +56,3 @@ export default function Activities() {
     </ContentContainer>
   );
 }
-// physical, social, intellectual, spiritual, emotional, environmental/Occupational
