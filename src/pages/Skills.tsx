@@ -8,13 +8,18 @@ import { Stack } from "@mui/material";
 export default function Skills() {
   return (
     <ContentContainer>
-      <PageTitles
-        title={"My Skills"}
-        subtitle="Collaborative, Communicative, Creative,
-            Curious, Quirky"
-      />
       <ScrollStack>
-        <Stack spacing={2} maxWidth={"70%"} alignSelf={"left"}>
+        <PageTitles
+          title={"My Skills"}
+          subtitle="Collaborative, Communicative, Creative,
+            Curious, Quirky"
+        />
+        <Stack
+          spacing={2}
+          maxWidth={"70%"}
+          alignSelf={"left"}
+          sx={{ padding: { xs: 0, md: "0 2rem 1rem 2rem" } }}
+        >
           <Typography variant="h5">
             1. Strategic Intelligence + Systems Thinking
           </Typography>

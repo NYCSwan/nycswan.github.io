@@ -43,7 +43,7 @@ export default function ActivityCard({
         <IconButton aria-label="share" color="primary">
           <ShareIcon />
         </IconButton>
-        <Button href={documentLink} size="small">
+        <Button href={documentLink} size="small" target="_blank">
           Learn more!
         </Button>
       </CardActions>

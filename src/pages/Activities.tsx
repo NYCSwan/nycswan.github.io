@@ -8,13 +8,13 @@ import ActivityCard from "../components/ActivityCard";
 export default function Activities() {
   return (
     <ContentContainer>
-      <PageTitles
-        title="Activity & Calendar ideas"
-        subtitle="Free printables, activity ideas, and calendar downloads for your
-        community! "
-      />
       <ScrollStack>
-        <Typography variant="h5">
+        <PageTitles
+          title="Activity & Calendar ideas"
+          subtitle="Free printables, activity ideas, and calendar downloads for your
+        community! "
+        />
+        <Typography variant="h5" textAlign="center" gutterBottom>
           You won't want to miss these resrouces that your seniors will love!
         </Typography>
         <Box

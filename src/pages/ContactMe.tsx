@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import ContentContainer from "../components/ContentContainer";
 import PageTitles from "../components/PageTitles";
 import ScrollStack from "../components/ScrollStack";
+import { Divider } from "@mui/material";
 
 export default function Contact() {
   return (
@@ -12,38 +13,53 @@ export default function Contact() {
         title="We should chat if you ..."
         subtitle="where you can find me"
       />
-
-      <ScrollStack direction={{ xs: "column", md: "row" }}>
-        <Stack flexDirection="column" width={{ xs: "100%", md: "35%" }}>
-          <Typography variant="h5">
+      <ScrollStack
+        direction={{ xs: "column", md: "row" }}
+        sx={{ justifyContent: "space-between", alignItems: "center" }}
+      >
+        <Stack flexDirection="column" width={{ xs: "100%", md: "45%" }}>
+          <Typography
+            variant="body1"
+            gutterBottom
+            sx={{ fontSize: "1.1rem", padding: "1rem 0" }}
+          >
             Want an administrator with diverse skills, expertise, and creative
-            solutions for person-directed senior care?
+            solutions for person-directed senior care
           </Typography>
-          <Typography variant="h5">
-            Are you looking for an experienced developer with a broad skillset?
+          <Divider variant="middle" component={"div"} />
+          <Typography
+            variant="body1"
+            sx={{ fontSize: "1.1rem", padding: "1rem 0" }}
+            gutterBottom
+          >
+            Find you work better with a teammate who is passionate about almost
+            everything
           </Typography>
-          <Typography variant="h5">
-            Find you work better with a teammate who is passionate about
-            everything... (from professional training to website accessibility)?
+          <Divider variant="middle" component={"div"} />
+          <Typography
+            variant="body1"
+            sx={{ fontSize: "1.1rem", padding: "1rem 0" }}
+            gutterBottom
+          >
+            Want to build on a mission that is accessible to everyone
           </Typography>
-          <Typography variant="h5">
-            Want to build on a mission that is accessible to everyone?
+          <Divider variant="middle" component={"div"} />
+          <Typography
+            variant="body1"
+            sx={{ fontSize: "1.1rem", padding: "1rem 0" }}
+            gutterBottom
+          >
+            Enjoy working with an awesome person and teammate
           </Typography>
-          <Typography variant="h5" gutterBottom>
-            Enjoy working with an awesome person and teammate?
-          </Typography>
+          <Divider variant="middle" component={"div"} />
         </Stack>
-        <Stack
-          flexDirection="column"
-          justifyContent={"center"}
-          width={{ xs: "100%", md: "45%" }}
-        >
+        <Stack flexDirection="column" width={{ xs: "100%", md: "45%" }}>
           <Box
             bgcolor={"primary.light"}
             padding={2}
             borderRadius={2}
-            alignSelf={{ xs: "center", md: "flex-end" }}
-            width={{ xs: "80%", md: "45%" }}
+            alignSelf={{ xs: "flex-end" }}
+            width={{ xs: "80%", md: "auto" }}
             alignContent={"center"}
           >
             <Typography
@@ -51,29 +67,26 @@ export default function Contact() {
               width={{ xs: "100%" }}
               align="center"
               alignSelf={"center"}
-              marginTop={2}
-              marginBottom={2}
+              gutterBottom
             >
               I&apos;m a technology nerd and non-profit manager driven by
-              curiosity. I&apos;m always up for a challenge, get in touch if
-              you&apos;d like a great partner!
+              curiosity. Always up for a challenge. Get in touch, if you&apos;d
+              like a great partner!
             </Typography>
-            <Typography variant="h5">Find me on: </Typography>
-            <Typography variant="h5" align="center">
-              <a href="https://www.linkedin.com/in/megan-swanby">Linked-in</a>
-            </Typography>
-            <Typography variant="h5" marginTop={0} align="center">
-              and
-            </Typography>
-            <Typography variant="h5" align="center">
-              <a href="https://www.github.com/nycswan">Github</a>
-            </Typography>
-            <Typography variant="h5" marginTop={0} align="center">
-              or
-            </Typography>
-            <Typography variant="h5" align="center">
-              Email
-            </Typography>
+            <Typography variant="h6">Find me on: </Typography>
+            <Stack direction={"row"} justifyContent="space-evenly">
+              <Typography variant="h5">
+                <a href="https://www.linkedin.com/in/megan-swanby">Linked-in</a>
+              </Typography>
+
+              <Typography variant="h5">
+                <a href="https://www.github.com/nycswan">Github</a>
+              </Typography>
+
+              <Typography variant="h5">
+                <a href="mailto:megan.swanby@gmail.com">Email</a>
+              </Typography>
+            </Stack>
           </Box>
         </Stack>
       </ScrollStack>

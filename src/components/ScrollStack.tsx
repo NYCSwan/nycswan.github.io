@@ -4,15 +4,18 @@ import { ReactNode } from "react";
 export default function ScrollStack({
   children,
   direction = { xs: "column" },
+  sx = {},
 }: {
   children: ReactNode;
   direction?: { [key in "xs" | "md" | "lg"]?: "row" | "column" };
+  sx?: { [key: string]: any };
 }) {
   return (
     <Stack
       spacing={2}
       direction={direction}
       sx={{
+        ...sx,
         alignSelf: "center",
         position: "relative",
         maxWidth: { xs: "100%", xl: "80%" },
