@@ -25,23 +25,27 @@ export default function ActivityCard({
     <Card
       variant="outlined"
       sx={{
-        maxWidth: 545,
+        maxWidth: 445,
         marginTop: "1rem",
         boxShadow: 2,
         borderRadius: "1rem",
         padding: "1rem",
       }}
     >
-      <CardMedia component="img" image={imageUrl} alt={title} width={"100%"} />
+      <CardMedia component="img" image={imageUrl} alt={title} height={"240"} />
       <CardContent>
-        <CardHeader title={title} />
+        <Typography variant="h5" gutterBottom>
+          {title}
+        </Typography>
         <Typography variant="body1">{description}</Typography>
       </CardContent>
       <CardActions>
-        <IconButton aria-label="share">
+        <IconButton aria-label="share" color="primary">
           <ShareIcon />
         </IconButton>
-        <Button href={documentLink}>Learn more!</Button>
+        <Button href={documentLink} size="small">
+          Learn more!
+        </Button>
       </CardActions>
     </Card>
   );

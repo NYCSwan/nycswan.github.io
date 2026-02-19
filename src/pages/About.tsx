@@ -13,7 +13,7 @@ export default function About() {
       />
       <ScrollStack>
         <Typography variant="body1">
-          Hey there! Thanks for stopping by! I'm
+          Hey there! I'm
           <span
             style={{
               fontFamily: "Major Mono Display",
