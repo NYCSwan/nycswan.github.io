@@ -15,7 +15,7 @@ export default function Activities() {
         community! "
         />
         <Typography variant="h5" textAlign="center" gutterBottom>
-          You won't want to miss these resrouces that your seniors will love!
+          You won't want to miss these resources that your seniors will love!
         </Typography>
         <Box
           sx={{

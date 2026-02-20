@@ -107,7 +107,7 @@ export default function Skills() {
           <Typography variant="h2">Tech Stack</Typography>
           <Typography variant="body1">
             Design and development go hand-in-hand. If technology is not made
-            accessable through thoughtful user-focused design, it will never
+            accessible through thoughtful user-focused design, it will never
             succeed. As a developer who specializes in the font end, I ensure
             each feature keeps the user in mind with clean, functional design.
           </Typography>
