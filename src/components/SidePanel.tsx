@@ -13,7 +13,10 @@ import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import coworker from "../assets/contact.jpg";
 import headshot from "../assets/headshot.jpg";
-import meImage from "../assets/me-hero.jpg";
+import meImage from "../assets/about.jpg";
+import portfolio from "../assets/portfolio.jpg";
+import experience from "../assets/experience.jpg";
+import skills from "../assets/skills.jpg";
 
 const ResponsiveDiv = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,
@@ -62,10 +65,11 @@ const ResponsiveImage = styled("img")(({ theme }) => ({
 
 const imageKey: Record<string, string> = {
   "0": headshot,
-  "1": headshot,
+  "1": experience,
   "2": coworker,
-  "3": meImage,
+  "3": portfolio,
   "4": meImage,
+  "5": skills,
 };
 export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
   const image = imageKey[pageTopicId];
@@ -128,7 +132,7 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
             </Grid>
             <Grid size={8} gap={1}>
               <Typography lineHeight={"40px"}>Megan Swanby</Typography>
-              <Typography lineHeight={"40px"}>NC</Typography>
+              <Typography lineHeight={"40px"}>North Carolina</Typography>
               <Typography lineHeight={"40px"}>
                 megan.swanby@gmail.com
               </Typography>

@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import ShareIcon from "@mui/icons-material/Share";
+import { theme } from "../ThemeOptions";
 
 export default function ActivityCard({
   title,
@@ -26,6 +27,7 @@ export default function ActivityCard({
       sx={{
         maxWidth: 445,
         marginTop: "1rem",
+        background: theme.palette.background.default,
         boxShadow: 2,
         borderRadius: "1rem",
         padding: "1rem",
