@@ -16,9 +16,8 @@ export default function Skills() {
         />
         <Stack
           spacing={2}
-          maxWidth={"70%"}
-          alignSelf={"left"}
-          sx={{ padding: { xs: 0, md: "0 2rem 1rem 2rem" } }}
+          maxWidth={"80%"}
+          sx={{ padding: { xs: 0, md: "0 1rem 0 2rem" } }}
         >
           <Typography variant="h5">
             1. Strategic Intelligence + Systems Thinking
@@ -39,16 +38,16 @@ export default function Skills() {
             participants without losing meaning.
           </Typography>
           <Typography variant="h5">
-            3. <b>Cultural</b> Humility and Relational Awareness
+            3. Cultural Humility and Relational Awareness
           </Typography>
           <Typography variant="body1">
             I am attentive, reflective, and eager to adapt my approach when
             working across race, class, culture, disability, and family systems
             in order to make participants feel seen, not managed and staff feel
-            respected rather than corrected.
+            respected.
           </Typography>
           <Typography variant="h5">
-            4. Advanced <b>Communication</b> & Literacy Skills
+            4. Advanced Communication & Literacy Skills
           </Typography>
           <Typography variant="body1">
             I write clearly, speak precisely, and adjust your tone for the
@@ -61,9 +60,7 @@ export default function Skills() {
             I am friendly, personable, and approachable without losing
             authority. People feel comfortable with me, and take me seriously.
           </Typography>
-          <Typography variant="h5">
-            6. Operational <b>Competence</b>{" "}
-          </Typography>
+          <Typography variant="h5">6. Operational Competence </Typography>
           <Typography variant="body1">
             I can budget, plan, forecast, prioritize, and manage resources
             responsibly. I understand staffing ratios, supply management,

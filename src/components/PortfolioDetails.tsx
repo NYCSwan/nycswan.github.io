@@ -44,7 +44,7 @@ function PortfolioDetails({
         component="img"
         sx={{
           display: { xs: "none", md: "flex" },
-          width: "50%",
+          width: "40%",
           boxShadow: "inset 0 0 0 0.2rem common.white",
           height: "auto",
           alignItems: "stretch",

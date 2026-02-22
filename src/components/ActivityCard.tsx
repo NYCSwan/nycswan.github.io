@@ -25,7 +25,7 @@ export default function ActivityCard({
     <Card
       variant="outlined"
       sx={{
-        maxWidth: 445,
+        maxWidth: 500,
         marginTop: "1rem",
         background: theme.palette.background.default,
         boxShadow: 2,
