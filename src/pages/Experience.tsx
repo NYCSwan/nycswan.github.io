@@ -9,12 +9,12 @@ import professionalResume from "../utils/experience.json";
 export default function Experience() {
   return (
     <ContentContainer>
-      <PageTitles
-        title={"My Experience"}
-        subtitle="A balance artist in the face of 
-          competing and conflicting needs and responsibilities"
-      />
       <ScrollStack>
+        <PageTitles
+          title={"My Experience"}
+          subtitle="A balance artist in the face of 
+          competing and conflicting needs and responsibilities"
+        />
         <Typography variant="h3" align="center" gutterBottom>
           Insightful, Proactive, Outcome-obsessed.
         </Typography>
@@ -53,7 +53,7 @@ export default function Experience() {
                   <Typography variant="body1">{description}</Typography>
                 </Grid>
               </React.Fragment>
-            )
+            ),
           )}
         </Grid>
       </ScrollStack>

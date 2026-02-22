@@ -13,6 +13,7 @@ import Portfolio from "./pages/Portfolio";
 import { styled } from "@mui/material/styles";
 import MobileMenu from "./components/MobileMenu";
 import Contact from "./pages/ContactMe";
+import Activities from "./pages/Activities";
 
 const TabPanelSubPage = styled(TabPanel)(({ theme }) => ({
   position: "relative",
@@ -61,6 +62,9 @@ function App() {
           </TabPanelSubPage>
           <TabPanelSubPage value={"4"}>
             <Contact />
+          </TabPanelSubPage>
+          <TabPanelSubPage value={"5"}>
+            <Activities />
           </TabPanelSubPage>
         </TabContext>
       </Box>

@@ -9,8 +9,8 @@ import Box from "@mui/material/Box";
 export default function Portfolio() {
   return (
     <ContentContainer>
-      <PageTitles title="My Portfolio" subtitle="what I have built" />
       <ScrollStack>
+        <PageTitles title="My Portfolio" subtitle="what I have built" />
         <Box sx={{ padding: { xs: 0, md: "0 2rem 1rem 2rem" } }}>
           <Typography variant="body1">
             Curiosity, problem-solving meaningful solutions, and a good cup of

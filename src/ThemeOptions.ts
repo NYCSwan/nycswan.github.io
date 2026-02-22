@@ -132,7 +132,7 @@ export const theme = createTheme({
     "0px 0px 1px 0px rgb(73, 18, 110)",
     "2px 2px 19px -2px rgba(0, 0, 0, 0.44)",
     "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px",
-    "0 0 0 0",
+    "rgba(0, 0, 0, 0.25) 0px 18px 40px -8px",
     "0 0 0 0",
     "0 0 0 0",
     "0 0 0 0",

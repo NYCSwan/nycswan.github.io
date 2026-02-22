@@ -17,7 +17,7 @@ const StyledTab = styled(Tab)(({ theme }) => ({
   color: "#EEFEBF",
   marginRight: "1px",
   transition: "all 0.2s ease",
-  minHeight: theme.breakpoints.only("xl") ? 80 : 60,
+  minHeight: theme.breakpoints.only("xl") ? 60 : 50,
   "&:hover": {
     backgroundColor: theme.palette.primary.dark,
   },
@@ -46,7 +46,7 @@ export default function CustomTabList({
         px: { xs: "2rem", xl: "3rem" },
         fontSize: { xs: "1rem", xl: "1.25rem" },
         fontWeight: "400",
-        top: { xs: "-60px", xl: "-80px" },
+        top: { xs: "-50px", xl: "-60px" },
         backgroundColor: "transparent",
         color: "text.secondary",
         marginLeft: "375px",
@@ -77,6 +77,11 @@ export default function CustomTabList({
         value={"3"}
         label={<Typography>Portfolio</Typography>}
         {...a11ySxProps("3")}
+      />
+      <StyledTab
+        value={"5"}
+        label={<Typography>Freebies</Typography>}
+        {...a11ySxProps("5")}
       />
       <StyledTab
         value={"4"}
