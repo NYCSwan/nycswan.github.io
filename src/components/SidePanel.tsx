@@ -65,11 +65,11 @@ const ResponsiveImage = styled("img")(({ theme }) => ({
 
 const imageKey: Record<string, string> = {
   "0": headshot,
-  "1": experience,
+  "1": skills,
   "2": coworker,
   "3": portfolio,
   "4": meImage,
-  "5": skills,
+  "5": experience,
 };
 export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
   const image = imageKey[pageTopicId];
@@ -139,7 +139,7 @@ export default function SidePanel({ pageTopicId }: { pageTopicId: string }) {
               <Typography
                 lineHeight={"40px"}
                 component={"a"}
-                href="https://www.canva.com/design/DAHAj1L81Og/_KHNpne6gxomZvm6jtKGAQ/view?utm_content=DAHAj1L81Og&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h10ad3f6be0"
+                href="hhttps://www.canva.com/design/DAHE-mThr9k/DG134YFsW_SyXsvwLZYKsw/view?utm_content=DAHE-mThr9k&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5f7458720fttps://www.canva.com/design/DAHAj1L81Og/_KHNpne6gxomZvm6jtKGAQ/view?utm_content=DAHAj1L81Og&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h10ad3f6be0"
                 sx={{
                   textDecoration: "none",
                   color: "inherit",
