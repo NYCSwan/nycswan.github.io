@@ -44,14 +44,14 @@ function PortfolioDetails({
         component="img"
         sx={{
           display: { xs: "none", md: "flex" },
-          width: "40%",
+          // width: "40%",÷/
           boxShadow: "inset 0 0 0 0.2rem common.white",
           height: "auto",
           alignItems: "stretch",
           justifyContent: "center",
           borderRadius: ".5rem",
           "&:hover, &:active": {
-            transform: "scale3d(1.5, 1.2, 0.3)",
+            transform: "scale3d(1.2, 1.2, 0.3)",
             overflow: "visible",
             zIndex: 999,
           },

@@ -4,10 +4,8 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  IconButton,
   Typography,
 } from "@mui/material";
-import ShareIcon from "@mui/icons-material/Share";
 import { theme } from "../ThemeOptions";
 
 export default function ActivityCard({
@@ -41,10 +39,7 @@ export default function ActivityCard({
         <Typography variant="body1">{description}</Typography>
       </CardContent>
       <CardActions>
-        <IconButton aria-label="share" color="primary">
-          <ShareIcon />
-        </IconButton>
-        <Button href={documentLink} size="small" target="_blank">
+        <Button href={documentLink} size="large" target="_blank">
           Learn more!
         </Button>
       </CardActions>
